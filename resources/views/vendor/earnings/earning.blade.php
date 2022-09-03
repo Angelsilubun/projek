@@ -1,11 +1,20 @@
-@extends('layouts.vendor')
+@extends('layouts.dashboard_vendor')
 
-<!--hero section-->
-@section('container')
-<section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
-    <div class="">
+    <!--hero section-->
+    @section('container')
+    <section class="home-section"  >
+        <div class="main">
+            <div class="topbar">
+                <div class="home-content">
+                    <i class='bx bx-menu'></i>
+                </div>
+                <div class="cardHeader-title">
+                    <h2>Earning</h2>
+                </div>
+            </div>
+            <div class="mt-5">
         <div class="row justify-content-center m-auto">
-            <div class="col-md-9">
+            <div class="col-md-11">
                 <div class="card" style="background-color: #fff;">
                             <div class="card">
                                 <div class="card-body">

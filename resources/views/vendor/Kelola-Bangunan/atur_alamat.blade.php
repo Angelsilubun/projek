@@ -1,9 +1,18 @@
 
-@extends('layouts.vendor')
+@extends('layouts.dashboard_vendor')
 
 <!--hero section-->
 @section('container')
-<section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
+<section class="home-section">
+    <div class="main">
+        <div class="topbar">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="cardHeader-title">
+                <h2>Atur alamat </h2>
+            </div>
+        </div>
     <div class="">
         <div class="cardBox1">
             <div class="card1">
@@ -43,60 +52,10 @@
         </div>
     
     
-         <div class="container mt-4 mb-4">
-
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col" style="width: 400px">
-          
-
-                    <div class="row ">
-                        <div class="col-md-12">
-                            <div class="card" style="background-color: #fff;">
-                                <div class="card-body">
-            
-                                    <a href="/Vendor/Kelola-Bangunan/layanan_step1"><i class="bi bi-arrow-left px-2 "></i><b>Kelola Bangunan</b><hr></a>
-                                v
-                                    <p><b>Tambah Layanan Bangunan!!</b>
-                                    <p class="text-muted">Daftarkan layanan bangunan dengan mengisi data 
-                                        dibawah ini</p>
-                                    </p><br>
-                                    <h6><svg  xmlns="http://www.w3.org/2000/svg" width="37px" height="37px" fill="currentColor"class="bi bi-1-circle-fill p-2" viewBox="0 0 16 16" style="color:rgb(255, 221, 0)">
-                                        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383h1.312Z"/>
-                                      </svg><b>Alamat vendor</b></h6>
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <p class="">Untuk mengatur lokasi dan detail alamat Anda</p>
-                                        </div>
-                                        <div class="col-lg-2">
-                                            <button class="btn btn-outline-success">Proses</button>
-                                        </div>   
-                                        <hr>
-                                    </div>
-                                    <div>
-                                        <h6 class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="37px" height="37px" fill="currentColor" class="bi bi-2-circle-fill p-2" viewBox="0 0 16 16" style="color:rgb(255, 221, 0)">
-                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z"/>
-                                          </svg><b>Jenis bangunan</b></h6>
-                                     <div class="row text-muted">
-                                        <div class="col-md-8 ">
-                                            <p class="">Mengatur jenis bangunan yang bisa dititipkan</p>
-                                        </div>
-                                        <div class="col-md-2 p-4">
-                                            {{-- <button class="btn btn-success">Tambah</button> --}}
-                                        </div>   
-                                      
-                                     </div>
-                                    </div>
-                                    
-                           
-                                </div>
-                            </div>
-                        </div>
-          </div>
-        </div>
-        <div class="col" style="width: 700px">
+        <div class="container mb-5 " style="width: 800px">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title"><i class="bi bi-arrow-left px-2 "></i>Atur Alamat</h5>
+                <h5 class="card-title">Atur Alamat</h5>
                 <hr width="100%" color="#c0c0c0">
                 <form action="">
                   <div class="mb-3">
@@ -152,12 +111,8 @@
                           <option>Sedayu</option>
                           <option>Sewon</option>
                           <option>Srandakan</option>
-                          
-
                         </select>
                       </div>
-                    
-      
                       <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Catatan</label>
                         <p><small class="text-muted">Deskripsikan patokan agar layanan bangunan anda
@@ -167,7 +122,6 @@
                 
                       <a href="/Vendor/Kelola-Bangunan/layanan_step2"><button type="button" class="btn btn-success col-md-12 mt-3">Selanjutnya</button></a>
                 </form>
-                
             </div>
           </div>
          

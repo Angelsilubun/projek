@@ -619,6 +619,47 @@ Route::get('Vendor/Kelola-PickUp/setelah_input', function () {
     ]);
 });
 
+Route::get('/vendor/dashboard', function () {
+    return view('/vendor/dashboard',[
+        "title" => "vendor"
+    ]);
+    });
+
+Route::get('vendor/keuangan/pemasukan', function () {
+    return view('vendor/keuangan/pemasukan', [
+        "title" =>"pemasukan"
+    ]);
+    });
+    
+    
+    Route::get('vendor/keuangan/penghasilan', function () {
+        return view('vendor/keuangan/penghasilan', [
+            "title" =>"penghasillan"
+        ]);
+        });
+    
+    Route::get('vendor/keuangan/penarikan', function () {
+        return view('vendor/keuangan/penarikan', [
+            "title" =>"penarikan"
+        ]);
+    });
+    
+    Route::get('vendor/keuangan/saldo', function () {
+        return view('vendor/keuangan/saldo', [
+            "title" =>"saldo"
+        ]);
+    });
+    Route::get('vendor/keuangan/tarikdana', function () {
+        return view('vendor/keuangan/tarikdana', [
+            "title" =>"tarikdana"
+        ]);
+    });
+    Route::get('vendor/keuangan/rekening', function () {
+        return view('vendor/keuangan/rekening', [
+            "title" =>"tarikdana"
+        ]);
+    });
+
 
 //Finance
 Route::get('/finance/page', [FinanceController::class, 'index'])->middleware('role:finance')->name('finance.index');

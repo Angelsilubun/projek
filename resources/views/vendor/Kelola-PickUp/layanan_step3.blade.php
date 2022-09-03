@@ -1,13 +1,22 @@
-@extends('layouts.vendor')
+@extends('layouts.dashboard_vendor')
 
 <!--hero section-->
 @section('container')
-<section class="align-items-center services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
+<section class="home-section">
+    <div class="main">
+        <div class="topbar">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="cardHeader-title">
+                <h2>Kelola Pick Up</h2>
+            </div>
+        </div>
     <div class="">
         <div class="cardBox1">
             <div class="card1">
                 <div>
-                    <a href="/Vendor/Kelola-Kendaraan/kelola_kendaraan" style="text-decoration:none">
+                    <a href="/vendor/Kelola-Kendaraan/kelola_kendaraan" style="text-decoration:none">
                         <div class="cardName1">Kendaraan
                         </div>
                     </a>
@@ -16,7 +25,7 @@
     
             <div class="card1">
                 <div>
-                    <a href="/Vendor/Kelola-Bangunan/kelola_bangunan" style="text-decoration:none">
+                    <a href="/vendor/Kelola-Bangunan/kelola_bangunan" style="text-decoration:none">
                         <div class="cardName1">Bangunan
                         </div>
                     </a>
@@ -25,7 +34,7 @@
     
             <div class="card1">
                 <div>
-                    <a href="/Vendor/Kelola-Barang/kelola_barang" style="text-decoration:none">
+                    <a href="/vendor/Kelola-Barang/kelola_barang" style="text-decoration:none">
                         <div class="cardName1">Barang
                         </div>
                     </a>
@@ -33,28 +42,17 @@
             </div>
             <div class="card2">
                 <div>
-                    <a href="/Vendor/Kelola-PickUp/kelola_pickup" style="text-decoration:none">
+                    <a href="/vendor/Kelola-PickUp/kelola_pickup" style="text-decoration:none">
                         <div class="cardName2">Pick Up
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-    
-    
-         <div class="container mt-4 mb-4">
-
-    <div class="row  ">
-        <div class="col" style="width: 800px">
-          
-
-                    <div class="row ">
-                        <div class="">
-                            <div class="card" style="background-color: #fff;">
-                                <div class="card-body">
-                                <div><label for="exampleFormControlInput1" class="form-label"><i class="bi bi-arrow-left px-2 "></i><b>Kelola Barang</b></label><hr></div>
-                                    
-                                
+            <div class="container mt-4 mb-4 " >
+                <div class="row justify-content-center">
+                        <div class="card" style="background-color: #fff; width:85% ">
+                            <div class="card-body mt-3">
                                     <p><b>Tambah layanan Pick Up!</b>
                                     <p class="text-muted">Daftarkan layanan pick up anda dengan mengisi
                                         data dibawah ini</p><br>
@@ -86,15 +84,14 @@
                                         </div>   
                                      </div>
                                     </div>
-                                    
-                                      
-                                    </div>
-                                   
-                                    </div>
                                     <br>  <p><i class="bi bi-check-circle-fill p-2 mt-5" style="font-size: 25px; color:rgb(98, 212, 133);"></i>Dengan mengisi data ini, maka Anda setuju
                                         dengan <b>Syarat & Ketentuan Umum </b> 
                                         Kebijakan Privasi</p>
                                         <a href="/Vendor/Kelola-PickUp/setelah_input"><button type="button" class="btn btn-success col-md-12 mt-3" data-bs-toggle="modal" data-bs-target="#exampleModalearning">Selanjutnya</button></a>
+                                    </div>
+                                   
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
