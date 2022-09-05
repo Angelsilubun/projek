@@ -239,11 +239,6 @@ Route::get('user/profiilevendor/profilevendor', function () {
     ]);
 });
 
-Route::get('user/profiilevendor/baru', function () {
-    return view('user/profiilevendor/baru', [
-        "title" =>"Wishtlist"
-    ]);
-});
 
 
 //Superadmin
