@@ -33,7 +33,8 @@
                             <div class="col-7">
                                 <p class="mb-2 text-success" style="font-size: 23px; margin-bottom: 10px">
                                     {{-- <b>Motor | Wijaya - titipsini</b> --}}
-                                    <b>Motor | <a class="btn-white" href="/user/profilevendor" role="button">Wijaya - titipsini</a></b>
+                                    {{-- <b>Motor | <a class="btn-white" href="/user/profilevendor/profilevendor" role="button">Wijaya - titipsini</a></b> --}}
+                                    <a class="btn-white" href="/user/profiilevendor/profilevendor" role="button"><b>Motor | Wijaya - titipsini</b></a>
                                 </p>
                             </div>
                             <div class="col-5 text-end" style="padding-right: 5px;">

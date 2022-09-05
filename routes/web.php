@@ -232,6 +232,20 @@ Route::get('/user/profile/Tentang', function () {
         ]);
     });
 
+//profile vendor di user
+Route::get('user/profiilevendor/profilevendor', function () {
+    return view('user/profiilevendor/profilevendor', [
+        "title" =>"Wishtlist"
+    ]);
+});
+
+Route::get('user/profiilevendor/baru', function () {
+    return view('user/profiilevendor/baru', [
+        "title" =>"Wishtlist"
+    ]);
+});
+
+
 //Superadmin
 Route::get('/superadmin/index', [SuperadminController::class, 'index'])->middleware('role:superadmin')->name('superadmin.index');
 
