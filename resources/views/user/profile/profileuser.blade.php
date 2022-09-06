@@ -9,58 +9,37 @@
                 <div class="card-body">
                     <h6 class="mb-0 fw-bold float-left">Account ID {{Auth::user()->id}}</h6>
                   <hr width="100%" color="#c0c0c0">
-                  <form class="row g-3 fw-bold">
-                    <div class="col-md-12">
-                        <label for="Name" class="form-label">Name</label>
-                        <input type="text" class="form-control input-text" id="Name"
-                            placeholder="name" value="{{Auth::user()->name}}">
-                    </div>
-                   
-                    <div class="col-md-6">
-                        <label for="inputEmail" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail"
-                            value="{{Auth::user()->email}}">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control input-text" id="username"
-                            placeholder="username" value="{{Auth::user()->name}}">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inpukota" class="form-label">Tempat Lahir</label>
-                        <input type="text" class="form-control input-text" id="inputkota"
-                            placeholder="kota" value="{{Auth::user()->kota}}">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputState" class="form-label">Tgl. Lahir</label>
-                        <input type="date" class="form-control input-text" id="inputdate"
-                            placeholder="" value="{{Auth::user()->date}}">
-                    </div>
-                    <div class="col-12">
-                        <label for="inputAddress" class="form-label">Address</label>
-                        <input type="text" class="form-control input-text" id="inputAddress"
-                            placeholder="address" value="{{Auth::user()->address}}">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Kota</label>
-                        <input type="text" class="form-control input-text" id="inputCity"
-                            placeholder="city" value="{{Auth::user()->city}}">
-                    </div>
-                    <div class="col-md-4">
-                        <label for="inputState" class="form-label">Negara</label>
-                        <input type="text" class="form-control input-text" id="inputCity"
-                            placeholder="city" value="{{Auth::user()->state}}">
-                    </div>
-                    {{-- <div class="col-md-2">
-                        <label for="inputnotelp" class="form-label">No Telp</label>
-                        <input type="number" class="form-control" id="inputnoTelp">
-                    </div> --}}
-                    <div class="col-9">
-                        <label for="inputDescription" class="form-label">Description</label>
-                        <textarea class="form-control" id="inputDescription" placeholder="Description" value="">{{Auth::user()->description}}</textarea>
-                    </div>
-        
-                </form>
+                    <form class="row g-3 fw-bold">
+                        <div class="col-md-12">
+                            <label for="Name" class="form-label">Nama</label>
+                            <input type="text" class="form-control input-text" id="Name"
+                                placeholder="name" value="{{Auth::user()->name}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail"
+                                value="{{Auth::user()->email}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control input-text" id="username"
+                                placeholder="username" value="{{Auth::user()->name}}">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputnoTelp" class="form-label">Nomor Telepon</label>
+                            <input type="number" class="form-control input-text" id="inputnoTelp" placeholder="No Telp">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputTglLhr" class="form-label">Tgl. Lahir</label>
+                            <input type="date" class="form-control input-text" id="inputdate"
+                                placeholder="" value="{{Auth::user()->date}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">Kota</label>
+                            <input type="text" class="form-control input-text" id="inputCity"
+                                placeholder="city" value="{{Auth::user()->city}}">
+                        </div>
+                    </form>
               </div>
             </div>
           </div>
@@ -88,6 +67,4 @@
 @endsection
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/8ae831de67.js" crossorigin="anonymous"></script> --}}
-{{-- </body>
-</html>
+<script src="https://kit.fontawesome.com/8ae831de67.js" crossorigin="anonymous"></script>

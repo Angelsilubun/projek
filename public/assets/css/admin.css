@@ -1308,6 +1308,12 @@ img {
     height: 100%;
 }
 
+.edit-profile {
+    /* margin-left: 180px; */
+    width: 200px;
+    height: 200px;
+}
+
 .img-tentang {
     /* margin-left: 180px; */
     width: 100px;

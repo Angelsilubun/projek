@@ -13,7 +13,7 @@
         </div>
         <div class="bt">
             <a href="/user/profile/edit_profile">
-                <button class="btn btn-outline-thema"> Edit </button>
+                <button class="btn btn-outline-thema"> Update </button>
             </a>
         </div>
         <hr width="100%" color="#c0c0c0"> 
