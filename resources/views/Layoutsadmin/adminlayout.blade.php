@@ -42,20 +42,20 @@
             </li>
             <li class="list {{ Request::segment(2) == 'profile' ? 'active' : '' }}">
                 <a href="/admin/profile">
-                    <i class='bx bx-user'></i>
-                    <span class="link_name">Profile</span>
+                    <i class='bx bx-key'></i>
+                    <span class="link_name">Ubah Password</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="/admin/profile">Profile</a></li>
+                    <li><a class="link_name" href="/admin/profile">Ubah Password</a></li>
                 </ul>
             </li>
             <li class="list {{ Request::segment(2) == 'home' ? 'active' : '' }}">
-                <a href="/admin/home">
+                <a href="/admin/home/home">
                     <i class='bx bx-home'></i>
                     <span class="link_name">Home</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="/admin/home">Home</a></li>
+                    <li><a class="link_name" href="/admin/home/home">Home</a></li>
                 </ul>
             </li>
             <li class="list {{ Request::segment(2) == 'layanan ' ? 'active' : '' }}">

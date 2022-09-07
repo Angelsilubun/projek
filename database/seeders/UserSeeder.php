@@ -18,6 +18,9 @@ class UserSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('12345678'),
+            'tgl_lahir' => '01-01-2001',
+            'kota' => 'Yogyakarta',
+            'no_telp' => '08187624392',
         ]);
 
         $admin->assignRole('admin');
@@ -26,6 +29,9 @@ class UserSeeder extends Seeder
             'name' => 'User',
             'email' => 'user@gmail.com',
             'password' => bcrypt('12345678'),
+            'tgl_lahir' => '01-01-2001',
+            'kota' => 'Yogyakarta',
+            'no_telp' => '08187624392',
         ]);
 
         $user->assignRole('user');
@@ -42,6 +48,9 @@ class UserSeeder extends Seeder
             'name' => 'Vendor',
             'email' => 'vendor@gmail.com',
             'password' => bcrypt('12345678'),
+            'tgl_lahir' => '01-01-2001',
+            'kota' => 'Yogyakarta',
+            'no_telp' => '08187624392',
         ]);
 
         $vendor->assignRole('vendor');
@@ -50,6 +59,9 @@ class UserSeeder extends Seeder
             'name' => 'Finance',
             'email' => 'finance@gmail.com',
             'password' => bcrypt('12345678'),
+            'tgl_lahir' => '01-01-2001',
+            'kota' => 'Yogyakarta',
+            'no_telp' => '08187624392',
         ]);
 
         $finance->assignRole('finance');

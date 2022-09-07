@@ -48,17 +48,12 @@
                                 <td>cahaya@mail.com</td>
 
                                 <td class="td" style="size: 30px;">
-                                    <button class="btnedit">
-                                        <i class='bx bx-edit'></i>
-                                    </button>
-
-                                    <button class="btndelete">
-                                        <i class='bx bx-trash'></i>
-                                    </button>
-
                                     <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
                                         class="btndetail">
                                         <i class='bx bx-detail'></i>
+                                    </button>
+                                    <button class="btndelete">
+                                        <i class='bx bx-trash'></i>
                                     </button>
                                 </td>
                             </tr>
@@ -69,15 +64,29 @@
                                 <td>cahaya@mail.com</td>
 
                                 <td class="td" style="size: 30px;">
-                                    <button class="btnedit">
-                                        <i class='bx bx-edit'></i>
-                                    </button>
-                                    <button class="btndelete">
-                                        <i class='bx bxs-trash'></i>
-                                    </button>
                                     <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
                                         class="btndetail">
                                         <i class='bx bx-detail'></i>
+                                    </button>
+                                    <button class="btndelete">
+                                        <i class='bx bx-trash'></i>
+                                    </button>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PT. Jaya Abadi</td>
+                                <td>Jln. Jend Sudirman no14</td>
+                                <td>IDR 8.436.000</td>
+                                <td>cahaya@mail.com</td>
+
+                                <td class="td" style="size: 30px;">
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                        class="btndetail">
+                                        <i class='bx bx-detail'></i>
+                                    </button>
+                                    <button class="btndelete">
+                                        <i class='bx bxs-trash'></i>
                                     </button>
                                 </td>
                             </tr>
@@ -88,35 +97,12 @@
                                 <td>cahaya@mail.com</td>
 
                                 <td class="td" style="size: 30px;">
-                                    <button class="btnedit">
-                                        <i class='bx bx-edit'></i>
-                                    </button>
-                                    <button class="btndelete">
-                                        <i class='bx bxs-trash'></i>
-                                    </button>
                                     <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
                                         class="btndetail">
                                         <i class='bx bx-detail'></i>
                                     </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>PT. Jaya Abadi</td>
-                                <td>Jln. Jend Sudirman no14</td>
-                                <td>IDR 8.436.000</td>
-                                <td>cahaya@mail.com</td>
-
-                                <td class="td" style="size: 30px;">
-                                    <button class="btnedit">
-                                        <i class='bx bx-edit'></i>
-                                    </button>
                                     <button class="btndelete">
                                         <i class='bx bxs-trash'></i>
-                                    </button>
-
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                        class="btndetail">
-                                        <i class='bx bx-detail'></i>
                                     </button>
                                 </td>
                             </tr>
@@ -153,7 +139,7 @@
                         </div>
                     </div>
                     <div class="modal-footer d-md-block">
-                        <button type="button" class="btn-sm btn-primary">Edit</button>
+                        {{-- <button type="button" class="btn-sm btn-primary">Edit</button> --}}
                         <button type="button" class="btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>

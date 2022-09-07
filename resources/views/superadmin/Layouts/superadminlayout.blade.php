@@ -39,15 +39,25 @@
                     <li><a class="link_name" href="/superadmin/dashboard">Dasboard</a></li>
                 </ul>
             </li>
-            <li class="list {{ Request::segment(2) == 'profil' ? 'active' : '' }}">
-                <a href="/superadmin/profil">
-                    <i class='bx bx-user'></i>
-                    <span class="link_name">Profile</span>
+            <li class="list {{ Request::segment(2) == 'profile' ? 'active' : '' }}">
+                <a href="/superadmin/profile">
+                    <i class='bx bx-key'></i>
+                    <span class="link_name">Ubah Password</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="/superadmin/profil">Profile</a></li>
+                    <li><a class="link_name" href="/superadmin/profile">Profile</a></li>
                 </ul>
             </li>
+
+            {{-- <li class="list {{ Request::segment(2) == '/profile/ubah' ? 'active' : '' }}">
+                <a href="/superadmin/profile/ubah">
+                    <i class='bx bx-user'></i>
+                    <span class="link_name">Ubah</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="/superadmin/profile/ubah"></a></li>
+                </ul>
+            </li> --}}
            
             <li class="list {{ Request::segment(2) == 'data' ? 'active' : '' }}">
                 <div class="iocn-link">

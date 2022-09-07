@@ -23,6 +23,9 @@ class User extends Authenticatable
         'email',
         'password',
         'photo'
+        // 'no_telp',
+        // 'tgl_lahir',
+        // 'kota'
     ];
     protected $guard_name = 'web';
     /**

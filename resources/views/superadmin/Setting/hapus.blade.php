@@ -23,7 +23,7 @@
                                     <td>Tidak membuat bukti pembayaran</td>
                                     <td>
                                         <button class="btn btn-success">
-                                            <i class='bx bx-trash'></i>
+                                            Hapus<i class='bx bx-trash'></i>
                                         </button> 
                                     </td>
                                 </tr>

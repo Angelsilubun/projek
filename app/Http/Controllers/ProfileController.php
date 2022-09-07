@@ -25,13 +25,18 @@ class ProfileController extends Controller
             'name'       => 'required|string|min:2|max:100',
             'email'      => 'required|email|unique:users,email, ' . $id . ',id',
             'old_password' => 'nullable|string',
-            'password' => 'nullable|required_with:old_password|string|confirmed|min:6'
+            'password' => 'nullable|required_with:old_password|string|confirmed|min:6',
+            // 'no_telp' => 'required|min:11|max:12',
+            // 'kota' => 'required|min:20|max:255'            
         ]);
 
         $user = User::find($id);
 
         $user->name = $request->name;
         $user->email = $request->email;
+        // $user->tgl_lahir = $request->tgl_lahir;
+        // $user->kota = $request->kota;
+        // $user->no_telp = $request->no_telp;
 
         if ($request->filled('old_password')) { //update password lama ke baru
             if (Hash::check($request->old_password, $user->password)) {

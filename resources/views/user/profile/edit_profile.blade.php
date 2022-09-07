@@ -17,10 +17,7 @@
                           {{-- @method("put") --}}
                           @csrf
                           <div class=" col text-center">
-                            <img src="{{ asset('assets/img/team-4.jpg') }}" alt="" class="edit-profile rounded-circle">
-                          </div>
-                          <div class="input-group">
-                            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                            <img src="{{ asset('assets/img/profile.png') }}" alt="" style="width: 20%;" edit-profile rounded-circle>
                           </div>
                           <div class="col-md-12">
                               <label for="Name" class="form-label">Nama</label>
@@ -38,8 +35,22 @@
                             <input type="text" class="form-control input-text" id="username" placeholder="username" value="{{Auth::user()->name}}">
                           </div>
                           <div class="col-md-12">
-                            <label for="inputnoTelp" class="form-label">Nomor Telepon</label>
-                            <input type="number" class="form-control input-text" id="inputnoTelp" placeholder="No Telp" value="{{ old ('notelp', Auth::user()->notelp) }}" required>
+                            <label for="inputtgl_lahir" class="form-label">Tanggal Lahir</label>
+                            <input type="date" class="form-control input-text" id="inputtgl_lahir" placeholder="Tanggal Lahir" value="{{ old ('tgl_lahir', Auth::user()->tgl_lahir) }}" required>
+                          </div>
+                          <div class="col-md-12">
+                            <label for="inputno_Telp" class="form-label">Nomor Telepon</label>
+                            <input type="number" class="form-control input-text" id="inputnoTelp" placeholder="No Telp" value="{{ old ('notelp', Auth::user()->no_telp) }}" required>
+                          </div>
+                          <div class="col-md-12">
+                            <label for="inputkota" class="form-label">Asal Kota</label>
+                            <input type="number" class="form-control input-text" id="inputkota" placeholder="No Telp" value="{{ old ('kota', Auth::user()->kota) }}" required>
+                          </div>
+                          <div class="col mb-7">
+                            <label for="password-confirm" class="col-sm-2 col-form-label">{{ __('Profile Photo') }}</label>
+                            <div class="col mb-6">
+                                <input id="photo" type="file" class="form-control" name="photo">
+                            </div>
                           </div>
                           <button type="button" class="btn btn-outline-success" id="liveAlertBtn">Simpan</button>
                         </form>  

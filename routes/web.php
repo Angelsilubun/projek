@@ -2,10 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HeroController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MapsController;
-use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\KontakController;
@@ -14,7 +12,6 @@ use App\Http\Controllers\FinanceController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TentangController;
-use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\SuperadminController;
 /*
 |--------------------------------------------------------------------------
@@ -38,32 +35,46 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 //Maps
 Route::get('/map', [MapsController::class, 'maps'])->name('map');
 
-//Admin
-Route::get('/admin/index', [AdminController::class, 'index'])->middleware('role:admin')->name('admin.index');
-Route::get('/admin/dashboard', [AdminController::class, 'index'])->middleware('auth');
-//profile admin
-Route::get('/admin/profile', [AdminController::class, 'profile'])->middleware('auth');
-Route::get('/admin/profile', [ProfileController::class, 'index'])->name('profile.index');
-Route::patch('/profile/{id}', [ProfileController::class, 'update'])->name('profile.update');
+////////////-----------ADMIN------------/////////////
+Route::controller(AdminController::class)->group(function(){
+    Route::get('/admin/index', 'index')->middleware('role:admin')->name('admin.index');
+    Route::get('/admin/dashboard', 'index')->middleware('auth');
+    Route::get('/admin/profile', 'profile')->middleware('auth');
+    Route::get('/admin/data/order', 'order')->middleware('auth');
+    Route::get('/admin/data/order=barang', 'barang')->middleware('auth');
+    Route::get('/admin/home/home', 'home')->middleware('auth');
+    Route::get('/admin/data/order=bangunan', 'bangunan')->middleware('auth');
+    Route::get('/admin/data/order=pickup', 'pickup')->middleware('auth');
+    Route::get('/admin/data/payment', 'payment')->middleware('auth');
+    Route::get('/admin/vendor', 'vendor')->middleware('auth');
+    Route::get('/admin/vendor/trans', 'trans')->middleware('auth');
+    Route::get('/admin/vendor/data-pick-up', 'data_pickup')->middleware('auth');
+    Route::get('/admin/vendor/data_trans=selesai', 'trans_selesai')->middleware('auth');
+    Route::get('/admin/vendor/data_trans=berlangsung', 'trans_berlangsung')->middleware('auth');
+    Route::get('/admin/setting', 'setting')->middleware('auth');
+    Route::get('/admin/data/pengaturan-user','pengaturanuser')->middleware('auth');
+});
 
-Route::get('/admin/data/order', [AdminController::class, 'order'])->middleware('auth');
-Route::get('/admin/data/order=barang', [AdminController::class, 'barang'])->middleware('auth');
-Route::get('/admin/home', [AdminController::class, 'home'])->middleware('auth');
-Route::get('/admin/data/order=bangunan', [AdminController::class, 'bangunan'])->middleware('auth');
-Route::get('/admin/data/order=pickup', [AdminController::class, 'pickup'])->middleware('auth');
-Route::get('/admin/data/payment', [AdminController::class, 'payment'])->middleware('auth');
-Route::get('/admin/vendor', [AdminController::class, 'vendor'])->middleware('auth');
-Route::get('/admin/vendor/trans', [AdminController::class, 'trans'])->middleware('auth');
-Route::get('/admin/vendor/data-pick-up', [AdminController::class, 'data_pickup'])->middleware('auth');
-Route::get('/admin/vendor/data_trans=selesai', [AdminController::class, 'trans_selesai'])->middleware('auth');
-Route::get('/admin/vendor/data_trans=berlangsung', [AdminController::class, 'trans_berlangsung'])->middleware('auth');
-Route::get('/admin/setting', [AdminController::class, 'setting'])->middleware('auth');
-Route::get('/admin/data/pengaturan-user', [AdminController::class, 'pengaturanuser'])->middleware('auth');
+//UBAH PASSWORD ADMIN
+Route::controller(ProfileController::class)->group(function(){
+    Route::get('/admin/profile', 'index')->name('profile.index');
+    Route::patch('/profile/{id}', 'update')->name('profile.update');
+});
 
-//admin profile
-// Route::get('/admin/profile/edit_profil', [AdminController::class, 'edit'])->middleware('auth');
+//CRUD HOME
+Route::controller(UserController::class)->group(function(){
+    Route::get('/admin/home/home','home')->middleware('auth')->name('admin.home.home');
+    Route::get('/admin/home/tambahhome','tambahhome')->name('admin.home.tambahhome');
+    Route::post('/admin/home/inserthome','inserthome')->name('admin.home.inserthome');
+    //Menampilkan Data berdasarkan ID
+    Route::get('/admin/home/tampilhome/{id}','tampilhome')->name('admin.home.tampilhome');
+    //Mengedit data berdasarkan id
+    Route::post('/admin/home/updatehome/{id}','updatehome')->name('admin.home.updatehome');
+    //delete data berdasarkan id
+    Route::get('/admin/home/deletehome/{id}','deletehome')->name('admin.home.deletehome');
+});
 
-//User
+/////-------USER-------/////
 Route::get('/user/index', [UserController::class, 'index'])->middleware('role:user')->name('user.index');
 Route::get('/user/layanan', [LayananController::class, 'index'])->middleware('auth');
 Route::get('/user/tentang', [TentangController::class, 'index'])->middleware('auth');
@@ -72,99 +83,22 @@ Route::get('/user/kontak', [KontakController::class, 'index'])->middleware('auth
 //admin kategori layanan
 Route::get('/admin/layanan-kategori/showsubkategori', [AdminController::class, 'kategorilayanan'])->middleware('auth');
 
-//user-pemesanan
-Route::get('/user/pemesanan/info_pembayaran', function () {
-    return view('/user/pemesanan/info_pembayaran',[
-        "title" => "pembayaran"
-    ]);
-});
-
-//user-pemesanan-history
-Route::get('/user/pemesanan/History/Last_Progress', function () {
-    return view('/user/pemesanan/History/Last_Progress',[
-        "title" => "history"
-    ]);
-});
-
-//user-pemesanan-pemesanan
-Route::get('/user/pemesanan/History/On_Progress', function () {
-    return view('/user/pemesanan/History/On_Progress',[
-        "title" => "pesanan"
-    ]);
-});
-
-Route::get('/user/pemesanan/History/On_Progress', function () {
-    return view('/user/pemesanan/History/On_Progress',[
-        "title" => "history"
-    ]);
-});
-
-Route::get('/user/pemesanan/struk', function () {
-    return view('/user/pemesanan/struk',[
-        "title" => "Struk"
-    ]);
-});
-
-Route::get('/user/pemesanan/konfirm_pembayaran', function () {
-    return view('/user/pemesanan/konfirm_pembayaran',[
-        "title" => "Konfirmasi Pembayaran"
-    ]);
-});
-
-Route::get('/user/pemesanan/pemesanan', function () {
-    return view('/user/pemesanan/pemesanan',[
-        "title" => "Pemesanan"
-    ]);
-});
-
-//profile user
-Route::get('/user/profile/profileuser', function () {
-    return view('/user/profile/profileuser',[
-        "title" => "Profile User"
-    ]);
-});
-
-Route::get('/user/profile/edit_profile', function () {
-    return view('/user/profile/edit_profile',[
-        "title" => "Edit Profile"
-    ]);
-});
-
-
-Route::get('/user/profile/Alamat', function () {
-    return view('/user/profile/Alamat',[
-        "title" => "Alamat"
-    ]);
-});
-
-Route::get('/user/profile/edit_alamat', function () {
-    return view('/user/profile/edit_alamat',[
-        "title" => "Edit alamat"
-    ]);
-});
-
-Route::get('/user/profile/Tambah_alamat', function () {
-    return view('/user/profile/Tambah_alamat',[
-        "title" => "Tambah Alamat"
-    ]);
-});
-
-Route::get('/user/Notifikasi', function () {
-    return view('/user/Notifikasi',[
-        "title" => "Notifikasi"
-    ]);
-});
-
-Route::get('/user/profile/kebijakanprivasi', function () {
-    return view('/user/profile/kebijakanprivasi',[
-        "title" => "Kebijakan Privasi"
-    ]);
-});
-
-Route::get('/user/profile/bantuan', function () {
-    return view('/user/profile/bantuan',[
-        "title" => "Bantuan"
-    ]);
+Route::controller(UserController::class)->group(function(){
+    Route::get('/user/pemesanan/info_pembayaran', 'InfoPembayaran')->middleware('auth');
+    Route::get('/user/pemesanan/History/Last_Progress', 'LasProgress')->middleware('auth');
+    Route::get('/user/pemesanan/History/On_Progress', 'OnProgress')->middleware('auth');
+    Route::get('/user/pemesanan/struk', 'struk')->middleware('auth');
+    Route::get('/user/pemesanan/konfirm_pembayaran', 'KonfirmPembayaran')->middleware('auth');
+    Route::get('/user/pemesanan/pemesanan', 'pemesanan')->middleware('auth');
+    //PROFILE USER
+    Route::get('/user/profile/profileuser', 'profileuser')->middleware('auth');
+    Route::get('/user/profile/edit_profile', 'editprofile')->middleware('auth');
+    Route::get('/user/profile/Alamat', 'alamat')->middleware('auth');
+    Route::get('/user/profile/edit_alamat', 'EditAlamat')->middleware('auth');
+    Route::get('/user/profile/Tambah_alamat', 'TambahAlamat')->middleware('auth');
+    Route::get('/user/Notifikasi', 'Notifikasi')->middleware('auth');
+    Route::get('/user/profile/kebijakanprivasi', 'KebijakanPrivasi')->middleware('auth');
+    Route::get('/user/profile/bantuan', 'Bantuan')->middleware('auth');
 });
 
 Route::get('/user/bantuan/Jawaban1', function () {
@@ -240,17 +174,25 @@ Route::get('user/profiilevendor/profilevendor', function () {
 });
 
 
-
 //Superadmin
-Route::get('/superadmin/index', [SuperadminController::class, 'index'])->middleware('role:superadmin')->name('superadmin.index');
+// Route::get('/superadmin/index', [SuperadminController::class, 'index'])->middleware('role:superadmin')->name('superadmin.index');
 
 Route::get('/superadmin/dashboard', function () {
     return view('superadmin/index');
 });
+// Route::get('/superadmin/profile', [SuperadminController::class, 'index'])->middleware('role:superadmin')->name('superadmin.profile.ubah');
 
-Route::get('/superadmin/profil', function () {
-    return view('superadmin/profil');
+// //ubah password 
+Route::controller(SuperadminController::class)->group(function(){
+    Route::get('/superadmin/index', 'index')->middleware('role:superadmin')->name('superadmin.index');
+    Route::get('/superadmin/profile','profile')->middleware('auth')->name('profile.profile');
+    Route::get('/superadmin/profile','indexp')->name('profile.indexp');
+    Route::patch('/profile/{id}','update')->name('profile.update');
 });
+// Route::get('/admin/profile', [AdminController::class, 'profile'])->middleware('auth');
+// Route::get('/admin/profile', [ProfileController::class, 'index'])->name('profile.index');
+// Route::patch('/profile/{id}', [ProfileController::class, 'update'])->name('profile.update');
+
 
 Route::get('/superadmin/data/alamat', function () {
     return view('superadmin/data/alamat');
@@ -293,52 +235,17 @@ Route::get('/superadmin/setting/tambah', function () {
 });
 
 //Vendor
-Route::get('/vendor/homelagi', [VendorController::class, 'index'])->middleware('role:vendor')->name('vendor.index');
-Route::get('/orderan_baru', static fn () => view('Vendor/order/kendaraan/orderan_baru'));
-Route::get('/rincian_baru', static fn () => view('Vendor/order/kendaraan/rincian_baru'));
-
-// --profile Vendor--
-
-Route::get('Vendor/Profile/profile_vendor', function () {
-    return view('Vendor/Profile/profile_vendor', [
-        "title" =>"profile_Vendor"
-    ]);
-});
-
-Route::get('Vendor/Profile/edit_profilevendor', function () {
-    return view('Vendor/Profile/edit_profilevendor', [
-        "title" =>"edit_profilevendor"
-    ]);
-});
-
-Route::get('Vendor/Profile/edit_alamat', function () {
-    return view('Vendor/Profile/profile_vendor', [
-        "title" =>"profile_Vendor"
-    ]);
-});
-
-Route::get('Vendor/Profile/Notifikasi', function () {
-    return view('Vendor/Profile/Notifikasi', [
-        "title" =>"notifikasi"
-    ]);
-});
-
-Route::get('Vendor/Profile/Kebijakan_privasi', function () {
-    return view('Vendor/Profile/Kebijakan_privasi', [
-        "title" =>"Kebijakan_privasi"
-    ]);
-});
-
-Route::get('Vendor/Profile/Ketentuan_layanan', function () {
-    return view('Vendor/Profile/Ketentuan_layanan', [
-        "title" =>"Ketentuan_layanan"
-    ]);
-});
-
-Route::get('Vendor/Profile/Pusat_bantuan', function () {
-    return view('Vendor/Profile/Pusat_bantuan', [
-        "title" =>"Pusat_bantuan"
-    ]);
+Route::controller(VendorController::class)->group(function(){
+    Route::get('/vendor/homelagi', 'index')->middleware('role:vendor')->name('vendor.index');
+    Route::get('/Vendor/order/kendaraan/orderan_baru', 'OrderanBaru')->middleware('auth');
+    Route::get('/Vendor/order/kendaraan/rincian_baru', 'RincianBaru')->middleware('auth');
+    Route::get('/Vendor/Profile/profile_vendor', 'ProfileVendor')->middleware('auth');
+    Route::get('/Vendor/Profile/edit_profilevendor', 'EditProfile')->middleware('auth');
+    Route::get('/Vendor/Profile/profile_vendor', 'EditAlamat')->middleware('auth');
+    Route::get('/Vendor/Profile/Notifikasi', 'Notifikasi')->middleware('auth');
+    Route::get('/Vendor/Profile/Kebijakan_privasi', 'KebijakanPrivasi')->middleware('auth');
+    Route::get('Vendor/Profile/Ketentuan_layanan', 'KetentuanLayanan')->middleware('auth');
+    Route::get('/Vendor/Profile/Pusat_bantuan', 'PusatBantuan')->middleware('auth');
 });
 
 Route::get('Vendor/Profile/Jawaban1', function () {
@@ -630,14 +537,14 @@ Route::get('Vendor/Kelola-PickUp/setelah_input', function () {
 
 
 //Finance
-Route::get('/finance/page', [FinanceController::class, 'index'])->middleware('role:finance')->name('finance.index');
-Route::get('/finance/transaksi/transaksiuser', [FinanceController::class, 'transaksiuser'])->middleware('auth');
-Route::get('/finance/transaksi/transaksivendor', [FinanceController::class, 'transaksivendor'])->middleware('auth');
-Route::get('/finance/transaksi/detailtransaksiuser', [FinanceController::class, 'detailtransaksiuser'])->middleware('auth');
-Route::get('/finance/transaksi/detailtransaksivendor', [FinanceController::class, 'detailtransaksivendor'])->middleware('auth');
-Route::get('/finance/DataPenarikan/penarikan', [FinanceController::class, 'penarikan'])->middleware('auth');
-Route::get('/finance/DataPenarikan/konfirmasi', [FinanceController::class, 'konfirmasi'])->middleware('auth');
-Route::get('/finance/DataPenarikan/history', [FinanceController::class, 'history'])->middleware('auth');
-Route::get('/finance/profilefinance', [FinanceController::class, 'profile'])->middleware('auth');
-
-Route::get('/category', [CategoryController::class, 'index'])->name('layanan.index');
+Route::controller(FinanceContoller::class)->group(function(){
+    Route::get('/finance/page', 'index')->middleware('role:finance')->name('finance.index');
+    Route::get('/finance/transaksi/transaksiuser', 'transaksiuser')->middleware('auth');
+    Route::get('/finance/transaksi/transaksivendor', 'transaksivendor')->middleware('auth');
+    Route::get('/finance/transaksi/detailtransaksiuser', 'detailtransaksiuser')->middleware('auth');
+    Route::get('/finance/transaksi/detailtransaksivendor', 'detailtransaksivendor')->middleware('auth');
+    Route::get('/finance/DataPenarikan/penarikan', 'penarikan')->middleware('auth');
+    Route::get('/finance/DataPenarikan/konfirmasi', 'konfirmasi')->middleware('auth');
+    Route::get('/finance/DataPenarikan/history', 'history')->middleware('auth');
+    Route::get('/finance/profilefinance', 'profilefinance')->middleware('auth');
+});

@@ -23,7 +23,7 @@
                                     <td>Sudah ditambahkan</td>
                                     <td>
                                         <button class="btn btn-success">
-                                            <i class='bx bx-adds'></i>
+                                            Tambah +<i class='bx bx-adds'></i>
                                         </button> 
                                     </td>
                                 </tr>

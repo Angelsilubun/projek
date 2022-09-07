@@ -32,7 +32,7 @@
                         <tr>
                             <td>Kendaraan</td>
                             <td>Kendaraan roda 2</td>
-                            <td><img src="{{asset('assets/img/foto1.jpg')}}"></td>
+                            <td><img src="{{asset('assets/img/foto1.jpg')}}" alt="" style="width: 20px;"></td>
                             <td>Sepeda Motor</td>
 
                             <td class="td" style="size: 30px;">
@@ -50,7 +50,7 @@
                         <tr>
                             <td>Kendaraan</td>
                             <td>Kendaraan roda 2</td>
-                            <td><img src="{{asset('assets/img/foto1.jpg')}}"></td>
+                            <td><img src="{{asset('assets/img/foto1.jpg')}}" alt="" style="width: 20px;"></td>
                             <td>Sepeda Motor</td>
 
                             <td class="td" style="size: 30px;">
@@ -68,7 +68,7 @@
                         <tr>
                             <td>Kendaraan</td>
                             <td>Kendaraan roda 2</td>
-                            <td><img src="{{asset('assets/img/foto1.jpg')}}"></td>
+                            <td><img src="{{asset('assets/img/foto1.jpg')}}" alt="" style="width: 20px;"></td>
                             <td>Sepeda Motor</td>
 
                             <td class="td" style="size: 30px;">
@@ -86,7 +86,7 @@
                         <tr>
                             <td>Kendaraan</td>
                             <td>Kendaraan roda 2</td>
-                            <td><img src="{{asset('assets/img/foto1.jpg')}}"></td>
+                            <td><img src="{{asset('assets/img/foto1.jpg')}}" alt="" style="width: 20px;"></td>
                             <td>Sepeda Motor</td>
 
                             <td class="td" style="size: 30px;">
@@ -104,7 +104,7 @@
                         <tr>
                             <td>Kendaraan</td>
                             <td>Kendaraan roda 2</td>
-                            <td><img src="{{asset('assets/img/ic2.png')}}"></td>
+                            <td><img src="{{asset('assets/img/ic2.png')}}" alt="" style="width: 20px;"></td>
                             <td>Sepeda Motor</td>
 
                             <td class="td" style="size: 30px;">
