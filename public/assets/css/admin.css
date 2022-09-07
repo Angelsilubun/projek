@@ -1308,6 +1308,11 @@ img {
     height: 100%;
 }
 
+.img-detail {
+    width: 25%;
+    height: 25%;
+}
+
 .edit-profile {
     /* margin-left: 180px; */
     width: 200px;

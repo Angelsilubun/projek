@@ -633,11 +633,16 @@ Route::get('Vendor/Kelola-PickUp/setelah_input', function () {
 Route::get('/finance/page', [FinanceController::class, 'index'])->middleware('role:finance')->name('finance.index');
 Route::get('/finance/transaksi/transaksiuser', [FinanceController::class, 'transaksiuser'])->middleware('auth');
 Route::get('/finance/transaksi/transaksivendor', [FinanceController::class, 'transaksivendor'])->middleware('auth');
-Route::get('/finance/transaksi/detailtransaksiuser', [FinanceController::class, 'detailtransaksiuser'])->middleware('auth');
-Route::get('/finance/transaksi/detailtransaksivendor', [FinanceController::class, 'detailtransaksivendor'])->middleware('auth');
 Route::get('/finance/DataPenarikan/penarikan', [FinanceController::class, 'penarikan'])->middleware('auth');
 Route::get('/finance/DataPenarikan/konfirmasi', [FinanceController::class, 'konfirmasi'])->middleware('auth');
 Route::get('/finance/DataPenarikan/history', [FinanceController::class, 'history'])->middleware('auth');
 Route::get('/finance/profilefinance', [FinanceController::class, 'profile'])->middleware('auth');
+
+Route::get('finance/DataPenarikan/vendor', function () {
+    return view('finance/DataPenarikan/vendor', [
+        "title" =>"Penarikan"
+    ]);
+});
+
 
 Route::get('/category', [CategoryController::class, 'index'])->name('layanan.index');
