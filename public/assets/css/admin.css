@@ -648,7 +648,7 @@
     position: relative;
     margin-top: 10px;
     display: grid;
-    max-height: 500px;
+    max-height: auto;
     background: var(--white);
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
@@ -658,7 +658,7 @@
 .details1 .recentOrders {
     position: relative;
     display: grid;
-    min-height: 500px;
+    min-height: auto;
     background: var(--white);
     padding: 20px;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);

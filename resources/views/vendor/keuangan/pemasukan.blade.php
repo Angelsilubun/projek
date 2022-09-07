@@ -45,7 +45,7 @@
                     <div class="details3">
                         <div class="recentOrders3">
                             <div class="rincian d-inline mb-2">
-          <a href="/vendor/keuangan/penghasilan" class=" fw-bold px-2 shadow float-end">VIEW ALL</a>
+          <a href="/vendor/keuangan/penghasilan" class=" fw-bold px-2 shadow float-end"><button class="btn btn-success"><i class="bi bi-journal-album p-2"></i>Lihat laporan</button></a>
                             </div>
                             <table>
                                 <thead>

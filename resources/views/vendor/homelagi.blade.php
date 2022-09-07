@@ -21,7 +21,6 @@
                                         <label for="faq" class="form-label" style="font-size: 20px"><b>Status Vendor</b></label>
                                         <p class="text-secondary" style="margin-left:10px; font-size:15px;"><i class="bi bi-geo-fill p-1"></i>Umbulharjo, Yogyakarta</p>
                                     </div>
-
                                     <div class="col-md-2">
                                         <label class="switch">
                                                <input type="checkbox" checked>
@@ -31,7 +30,6 @@
                                             </label>
                                        </label>
                                    </div>
-                                  
                                 </div>
                                 <div class="container">
                                     <div class="card-body rounded col-md-11 ps-5" style="background: #F2F2F2E3">
@@ -41,13 +39,12 @@
                                                 <b><p>Rp 10.000.000</p></b>
                                             </div>
                                             <div class="col-md-1 text-success">
-                                                <a href="/earning">
+                                                <a href="/vendor/keuangan/saldo">
                                                 <h3><i class="bi bi-arrow-right"></i></h3>
                                                 </a>
                                             </div>   
                                         </div>
                                     </div>
-                                   
                                         <div class="details3 col-md-11">
                                             <div class="recentOrders3">
                                               
@@ -75,10 +72,8 @@
                                                             <td>Mori Ucing</td>
                                                             <td>2 Mobil, 1 Motor</td>
                                                             <td>3</td>
-                            
                                                             <td class="td" style="font-size: 12px;">
                                                                 <a href="/rincian_baru"><button class="btnedit">Terima</button></a>
-                            
                                                                 <button class="btndelete"> Tolak</button>
                                                             </td>
                                                         </tr>
@@ -87,12 +82,9 @@
                                                             <td>Rebecca Howward</td>
                                                             <td>Apartement</td>
                                                             <td>1</td>
-                            
                                                             <td class="td" style="font-size: 12px;">
                                                                 <a href="/rincian_baru" role="button"><button class="btnedit">Terima</button></a>
-                            
                                                                 <button class="btndelete"> Tolak</button>
-                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -100,12 +92,9 @@
                                                             <td>Dila Triyani</td>
                                                             <td>2 Tas, Sepatu</td>
                                                             <td>3</td>
-                            
                                                             <td class="td" style="font-size: 12px;">
                                                                 <a href="/rincian_baru" role="button"><button class="btnedit">Terima</button></a>
-                            
                                                                 <button class="btndelete"> Tolak</button>
-                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -113,12 +102,9 @@
                                                             <td>Angelie Shakira</td>
                                                             <td>Rumah</td>
                                                             <td>1</td>
-                            
                                                             <td class="td" style="font-size: 12px;">
                                                                 <a  href="/rincian_baru"><button class="btnedit">Terima</button></a>
-                            
                                                                 <button class="btndelete"> Tolak</button>
-                            
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -131,8 +117,5 @@
                         </div>
                     </div>
                 </div></div>
-        
-
     </section>
-        
 @endsection

@@ -31,7 +31,7 @@
         <li class="list {{ Request::segment(2) == 'pesanan' ? 'active' : '' }}">
             <div class="iocn-link">
                 <a>
-                    <i class='bx bx-data'></i>
+                    <i class="bi bi-bag-fill"></i>
                     <span class="link_name dropBtn">Pesanan</span>
                 </a>
                 <i class='bx bxs-chevron-down arrow'></i>
@@ -65,7 +65,7 @@
         <li class="list {{ Request::segment(2) == 'Vendor' ? 'active' : '' }}">
             <div class="iocn-link">
                 <a>
-                    <i class='bx bxs-shopping-bags'></i>
+                    <i class="bi bi-cash-coin"></i>
                     <span class="link_name dropBtn">Keuangan</span>
                 </a>
                 <i class='bx bxs-chevron-down arrow'></i>
@@ -104,7 +104,7 @@
         <li class="">
             <a style="color:white " id="" class="" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 <i class="bi bi-person-circle"></i> {{ Auth::user()->name }}
-                </a>
+            </a>
         </li>
     </ul>
 </div>

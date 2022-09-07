@@ -48,7 +48,7 @@
                                 <td>cahaya@mail.com</td>
 
                                 <td class="td" style="size: 30px;">
-                                    <button class="btnedit">
+                                    <button class="btnedit" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <i class='bx bx-edit'></i>
                                     </button>
 
@@ -56,7 +56,7 @@
                                         <i class='bx bx-trash'></i>
                                     </button>
 
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1" 
                                         class="btndetail">
                                         <i class='bx bx-detail'></i>
                                     </button>
@@ -69,13 +69,13 @@
                                 <td>cahaya@mail.com</td>
 
                                 <td class="td" style="size: 30px;">
-                                    <button class="btnedit">
+                                    <button class="btnedit" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <i class='bx bx-edit'></i>
                                     </button>
                                     <button class="btndelete">
                                         <i class='bx bxs-trash'></i>
                                     </button>
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1"
                                         class="btndetail">
                                         <i class='bx bx-detail'></i>
                                     </button>
@@ -88,13 +88,13 @@
                                 <td>cahaya@mail.com</td>
 
                                 <td class="td" style="size: 30px;">
-                                    <button class="btnedit">
+                                    <button class="btnedit" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <i class='bx bx-edit'></i>
                                     </button>
                                     <button class="btndelete">
                                         <i class='bx bxs-trash'></i>
                                     </button>
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1"
                                         class="btndetail">
                                         <i class='bx bx-detail'></i>
                                     </button>
@@ -107,15 +107,15 @@
                                 <td>cahaya@mail.com</td>
 
                                 <td class="td" style="size: 30px;">
-                                    <button class="btnedit">
+                                    <button class="btnedit" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <i class='bx bx-edit'></i>
                                     </button>
                                     <button class="btndelete">
                                         <i class='bx bxs-trash'></i>
                                     </button>
 
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                        class="btndetail">
+                                    <button type="button" 
+                                        class="btndetail" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                         <i class='bx bx-detail'></i>
                                     </button>
                                 </td>
@@ -126,7 +126,7 @@
             </div>
         </div>
 
-        <!-- Modal -->
+        <!-- Modal edit -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -156,6 +156,67 @@
                         <button type="button" class="btn-sm btn-primary">Edit</button>
                         <button type="button" class="btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- modal detail --}}
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header hader">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <img src="../../assets/img/foto1.jpg" class="rounded-circle" alt="..." style="width: 150px; height:150px">
+                            <p>CV.BRAXY PANDA</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="col-md-12 text-muted">
+                                Saldo Vendor
+                            </div>
+                            <div class="col-md-12" style="font-size:30px; color:rgb(85, 194, 140)">
+                                IDR 2.000.000
+                            </div>
+                        </div>
+                        
+                       
+                        <div class="">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    Saldo Vendor
+                                </div>
+                                <div class="col-md-6">
+                                    IDR 2.000.000
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                ID Vendor
+                            </div>
+                            <div class="col-md-6">
+                            12343434
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                               Nama Vedor
+                            </div>
+                            <div class="col-md-6">
+                                CV. Braxy Panda
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                Nama pemilik
+                            </div>
+                            <div class="col-md-6">
+                               Ahmad Arif
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
