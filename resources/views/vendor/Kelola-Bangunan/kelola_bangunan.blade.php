@@ -1,23 +1,32 @@
-@extends('layouts.vendor')
+@extends('layouts.dashboard_vendor')
 
 <!--hero section-->
 @section('container')
-<section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
+<section class="home-section">
+    <div class="main">
+        <div class="topbar">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="cardHeader-title">
+                <h2>Kelola Bangunan</h2>
+            </div>
+        </div>
     <div class="">
         <div class="cardBox1">
             <div class="card1">
                 <div>
-                    <a href=" /Vendor/Kelola-kendaraan/kelola_kendaraanstep1" style="text-decoration:none">
+                    <a href=" /Vendor/Kelola-kendaraan/kelola_kendaraan" style="text-decoration:none">
                         <div class="cardName1">Kendaraan
                         </div>
                     </a>
                 </div>
             </div>
     
-            <div class="card1">
+            <div class="card2">
                 <div>
-                    <a href=" /Vendor/Kelola-Bangunan/kelola_bangunanstep1" style="text-decoration:none">
-                        <div class="cardName1">Bangunan
+                    <a href=" /Vendor/Kelola-Bangunan/kelola_bangunan" style="text-decoration:none">
+                        <div class="cardName2">Bangunan
                         </div>
                     </a>
                 </div>
@@ -33,7 +42,7 @@
             </div>
             <div class="card1">
                 <div>
-                    <a href=" /Vendor/Kelola_PickUp/kelola_pickupstep1" style="text-decoration:none">
+                    <a href=" /Vendor/Kelola_PickUp/kelola_pickup" style="text-decoration:none">
                         <div class="cardName1">Pick Up
                         </div>
                     </a>

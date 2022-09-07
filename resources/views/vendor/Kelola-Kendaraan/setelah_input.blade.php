@@ -1,13 +1,22 @@
-@extends('layouts.vendor')
+@extends('layouts.dashboard_vendor')
 
 <!--hero section-->
 @section('container')
-<section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
+<section class="home-section">
+    <div class="main">
+        <div class="topbar">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="cardHeader-title">
+                <h2>Kelola Bangunan</h2>
+            </div>
+        </div>
     <div class="">
         <div class="cardBox1">
             <div class="card2">
                 <div>
-                    <a href="/Vendor/Kelola-kendaraan/kelola_kendaraan" style="text-decoration:none">
+                    <a href="/vendor/Kelola-kendaraan/kelola_kendaraan" style="text-decoration:none">
                         <div class="cardName2">Kendaraan
                         </div>
                     </a>
@@ -16,7 +25,7 @@
     
             <div class="card1">
                 <div>
-                    <a href="/Vendor/Kelola-Bangunan/kelola_bangunan" style="text-decoration:none">
+                    <a href="/vendor/Kelola-Bangunan/kelola_bangunan" style="text-decoration:none">
                         <div class="cardName1">Bangunan
                         </div>  
                     </a>
@@ -25,7 +34,7 @@
     
             <div class="card1">
                 <div>
-                    <a href="/Vendor/Kelola-Barang/kelola_barang" style="text-decoration:none">
+                    <a href="/vendor/Kelola-Barang/kelola_barang" style="text-decoration:none">
                         <div class="cardName1">Barang
                         </div>
                     </a>
@@ -33,7 +42,7 @@
             </div>
             <div class="card1">
                 <div>
-                    <a href="/Vendor/Kelola-PickUp/kelola_pickup" style="text-decoration:none">
+                    <a href="/vendor/Kelola-PickUp/kelola_pickup" style="text-decoration:none">
                         <div class="cardName1">Pick Up
                         </div>
                     </a>
@@ -42,168 +51,97 @@
         </div>
     
     
-    <div class="p-5 container card " style="width: 70%" >    
-        <div class="card mt-3">
-            <h5 class="card-header bg-success text-white">Detail kelola Kendaraan</h5>
-            <div class="card-body">
-                <div class="mb-3" style="max-width: auto;">
-                    <div class="row g-0">
-                      <div class="col-md-auto">
-                        <h5><i class="bi bi-geo-fill p-2" style="font-size: 25px; color: #fd7e14;"></i><b>Alamat lahan parkir</b></h5>
-                        <div class="card-body">
-                            <p class="card-text">Karangjambe, Gg Arjuna No.59, Jaranan,Banguntapan, kec.Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198</p>
-                       
-                          </div>
-                </div>   
-                <h5><svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" fill="currentColor" style="color:#fd7e14" class="bi bi-car-front p-2" viewBox="0 0 16 16">
-                    <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"/>
-                    <path fill-rule="evenodd" d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3H4.82Z"/>
-                  </svg><b>Jenis Kendaraan</b></h5>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3 ">
-                                        <p>Kendaraan roda 2 </p>
-                                    </div>
-                                    <div class="col-md-auto">
-                                        <p class="text-end">: motor, Delman</p>
-                                    </div>   
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <p>Kendaraan roda 3 </p>
-                                    </div>
-                                    <div class="col-md-auto">
-                                        <p class="text-end">: becak</p>
-                                    </div>   
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-md-3">
-                                        <p>Kendaraan roda 4 </p>
-                                    </div>
-                                    <div class="col-md-auto">
-                                        <p class="text-end">: mobil, Truk</p>
-                                    </div>   
-                                  </div>
-                              </div>
-                </div>          
-                
-
-                <h5><i class="bi bi-house p-2" style="font-size: 25px; color: #fd7e14;"></i><b>Kapasitas Parkir</b></h5>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <p>Mobil </p>
-                        </div>
-                        <div class="col-md-auto">
-                            <p class="text-end">: 2 buah</p>
-                        </div>   
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <p>Truk </p>
-                        </div>
-                        <div class="col-md-auto">
-                            <p class="text-end">: 1 buah</p>
-                        </div>   
-                      </div>
-                      <div class="row">
-                        <div class="col-md-3">
-                            <p>Bus</p>
-                        </div>
-                        <div class="col-md-auto">
-                            <p class="text-end">: mobil, Truk</p>
-                        </div>   
-                      </div>
-                  </div>
-                    <a href="#" class="btn btn-outline-success  col-md-2"  data-bs-toggle="modal" data-bs-target="#Modal">Hapus</a>
-                  <a href="#" class="btn btn-outline-success  col-md-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</a>
+    <div class="p-5 container card mb-5 " style="width: 90%" >   
+         <a href="/Vendor/Kelola-Kendaraan/layanan_step1 " ><button class="btn btn-success p-2  " style="font-size: 20px"><i  class="bi bi-plus"></i>Tambah layanan</button></a>
+         <div class="details1 ">
+            <div class="recentOrders">
+                <div class="cardHeader">
+                    <h2>Detail kelola Kendaraan</h2>
+                    <a href="#" class="btn btn-thema">View All</a>
                 </div>
-                </div>
+                <table class="table-borderless mt-3 w-auto">
+                    <thead class="text-start">
+                        <tr>
+                            <td>Gambar</td>
+                            <td>Jenis Kendaraan</td>
+                            <td>Kategori</td>
+                            <td>Kapasitas Parkir</td>
+                            <td>Harga</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody class="text-start">
+                        <tr>
+                            <td><img src="" alt=""></td>
+                            <td>Mobil</td>
+                            <td>Golongan 3</td>
+                            <td>2</td>
+                            <td>Rp20.000</td>
+                            <td class="col-md-2">
+                                <a href="" class="btn btn-info "data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-info-circle"></i></a>
+                                <a href="" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="bi bi-pencil-square"></i></a>
+                                <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal"><i class="bi bi-trash"></i></a>
+                            </td>
+                           
+                            <!-- <td><span class="status return">Return</span></td> -->
+                        </tr>
+                        <tr>
+                            <td><img src="" alt=""></td>
+                            <td>Motor</td>
+                            <td>Golongan 1</td>
+                            <td>4</td>
+                            <td>Rp20.000</td>
+                            <td class="col-md-2">
+                                <a href="" class="btn btn-info "data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-info-circle"></i><a>
+                                <a href="" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="bi bi-pencil-square"></i></a>
+                                <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal"><i class="bi bi-trash"></i></a>
+                            </td>
+                            <!-- <td><span class="status return">Return</span></td> -->
+                        </tr>
+                        <tr>
+                            <td><img src="" alt=""></td>
+                            <td>Truk</td>
+                            <td>Golongan 4</td>
+                            <td>1</td>
+                            <td>Rp20.000</td>
+                            <td class="col-md-2">
+                                <a href="" class="btn btn-info "data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-info-circle"></i><a>
+                                <a href="" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="bi bi-pencil-square"></i></a>
+                                <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal"><i class="bi bi-trash"></i></a>
+                            </td>
+                            <!-- <td><span class="status return">Return</span></td> -->
+                        </tr>
+                        <tr>
+                            <td><img src="" alt=""></td>
+                            <td>Mobil</td>
+                            <td>Golongan 3</td>
+                            <td>2</td>
+                            <td>Rp20.000</td>
+                            <td class="col-md-2">
+                                <a href="" class="btn btn-info "data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-info-circle"></i><a>
+                                <a href="" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="bi bi-pencil-square"></i></a>
+                                <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal"><i class="bi bi-trash"></i></a>
+                            </td>
+                            <!-- <td><span class="status return">Return</span></td> -->
+                        </tr>
+                        <tr>
+                            <td><img src="" alt=""></td>
+                            <td>Skuter</td>
+                            <td>Golongan 1</td>
+                            <td>4</td>
+                            <td>Rp20.000</td>
+                            <td class="col-md-2">
+                                <a href="" class="btn btn-info "data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-info-circle"></i><a>
+                                <a href="" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="bi bi-pencil-square"></i></a>
+                                <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal"><i class="bi bi-trash"></i></a>
+                            </td>
+                           
+                            <!-- <td><span class="status return">Return</span></td> -->
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            
-                 
-                    <div class="card mt-5">
-                    <h5 class="card-header bg-success text-white">Detail kelola Kendaraan</h5>
-                    <div class="card-body">
-                        <div class="mb-3" style="max-width: auto;">
-                            <div class="row g-0">
-                              <div class="col-md-auto">
-                                <h5><i class="bi bi-geo-fill p-2" style="font-size: 25px; color: #fd7e14;"></i><b>Alamat lahan parkir</b></h5>
-                                <div class="card-body">
-                                    <p class="card-text">Karangjambe, Gg Arjuna No.59, Jaranan,Banguntapan, kec.Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198</p>
-                               
-                                  </div>
-                        </div>   
-                                    <h5><svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" fill="currentColor" style="color:#fd7e14" class="bi bi-car-front p-2" viewBox="0 0 16 16">
-                                        <path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"/>
-                                        <path fill-rule="evenodd" d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.807.807 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155 1.806 0 4.037-.084 5.592-.155A1.479 1.479 0 0 0 15 9.611v-.413c0-.099-.01-.197-.03-.294l-.335-1.68a.807.807 0 0 0-.43-.563 1.807 1.807 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3H4.82Z"/>
-                                      </svg><b>Jenis Kendaraan</b></h5>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-3 ">
-                                                <p>Kendaraan roda 2 </p>
-                                            </div>
-                                            <div class="col-md-auto">
-                                                <p class="text-end">: motor, Delman</p>
-                                            </div>   
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <p>Kendaraan roda 3 </p>
-                                            </div>
-                                            <div class="col-md-auto">
-                                                <p class="text-end">: becak</p>
-                                            </div>   
-                                          </div>
-                                          <div class="row">
-                                            <div class="col-md-3">
-                                                <p>Kendaraan roda 4 </p>
-                                            </div>
-                                            <div class="col-md-auto">
-                                                <p class="text-end">: mobil, Truk</p>
-                                            </div>   
-                                          </div>
-                                      </div>
-                        </div>          
-                        
-        
-                        <h5><i class="bi bi-house p-2" style="font-size: 25px; color: #fd7e14; "></i><b>Kapasitas Parkir</b></h5>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <p>Mobil </p>
-                                </div>
-                                <div class="col-md-auto">
-                                    <p class="text-end">: 2 buah</p>
-                                </div>   
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <p>Truk </p>
-                                </div>
-                                <div class="col-md-auto">
-                                    <p class="text-end">: 1 buah</p>
-                                </div>   
-                              </div>
-                              <div class="row">
-                                <div class="col-md-3">
-                                    <p>Bus</p>
-                                </div>
-                                <div class="col-md-auto">
-                                    <p class="text-end">: mobil, Truk</p>
-                                </div>   
-                              </div>
-                          </div>
-                            <a href="#" class="btn btn-outline-success  col-md-2"  data-bs-toggle="modal" data-bs-target="#Modal">Hapus</a>
-                          <a href="#" class="btn btn-outline-success  col-md-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</a>
-                        </div>
-                        </div>
-                        </div>
-                       <a href="/Vendor/Kelola-Kendaraan/layanan_step1"><button class="col-sm-12 btn btn-outline-success mt-5">Tambah Layanan</button></a> 
-                        </div>
-                      
-                        </div>
-
+        </div>
                         <!--MODAL HAPUS-->
                         <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -221,18 +159,32 @@
                                 </div>
                             </div>
                         </div>
-
-                       
                         <!--modal edit-->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog ">
                               <div class="modal-content">
                                 <div class="modal-header">
                                   <h5 class="modal-title" id="exampleModalLabel" style="color:#27cd88">Form Edit</h5>
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                <h3 style="color:  #999">Edit Alamat</h3>
+                                    <div class="file-upload">
+                                        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Edit foto</button>
+                                      
+                                        <div class="image-upload-wrap">
+                                          <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+        
+                                          <img src="../../assets/img/mobil.jpg" alt="" class="justify-content-center" style="width:100%; height:20% ">
+                                          
+                                        </div>
+                                        <div class="file-upload-content">
+                                          <img class="file-upload-image" src="#" alt="your image" />
+                                          <div class="image-title-wrap">
+                                            <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                <h5 style="color:  #999">Edit Alamat</h5>
                                 <div class="container">
                                     <div class="row row-cols-1 row-cols-md-12 g-4">
                                         <form action="">
@@ -259,7 +211,6 @@
                                                     <option>Kulon Progo</option>
                                                     <option>Gunung Kidul</option>
                                                     <option>Kota Yogyakarta</option>
-                          
                                                   </select>
                                                 </div>
                                                 
@@ -283,127 +234,111 @@
                                                     <option>Sedayu</option>
                                                     <option>Sewon</option>
                                                     <option>Srandakan</option>
-                                                    
-                          
                                                   </select>
                                                 </div>
-                                              
-                                
                                                 <div class="mb-3">
                                                   <label for="exampleFormControlTextarea1" class="form-label">Catatan</label>
                                                   <p><small class="text-muted">Deskripsikan Alamat lahan parkir Anda agar mudah ditemukan(opsional)</small></p>
                                                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Karangjambe, Gg Arjuna No.59, Jaranan"></textarea>
                                                 </div>
-                                                <h3 style="color:  #999">Jenis Kendaraan</h3>
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <P><b>Roda 2</b></P>
-                                                        <div class="form-check">
-                                                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                          <label class="form-check-label" for="flexCheckDefault">
-                                                          Motor
-                                                          </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                          <label class="form-check-label" for="flexCheckDefault">
-                                                          Sepeda
-                                                          </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                          <label class="form-check-label" for="flexCheckDefault">
-                                                          Delman
-                                                          </label>
-                                                        </div><br>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <P><b>Roda 3</b></P>
-                                                    <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                     Bajaj
-                                                     </label>
-                                                     </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                        Becak
-                                                        </label>
-                                                    </div>
-                                                    </div>   
-                                                    <div class="col-md-4">
-                                                        <P><b>Roda 4</b></P>
-                                                    <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                     Mobil
-                                                     </label>
-                                                     </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                        Truk
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                        <label class="form-check-label" for="flexCheckDefault">
-                                                        Bus
-                                                        </label>
-                                                    </div>
-                                                    </div>   
-                                                </div><hr>
+                                                 
+                                                </div>
                                           </form>
                                         </div>
-                                        
+                                        <h5 style="color:  #999">Nama kendaraan</h5>
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Mobil">
+                                        </div>
+                                        <h5 style="color:  #999">Kategori</h5>
+                                        <div class="col-sm-12">
+                                            <select id="inputState" class="form-select" placeholder="Banguntapan">
+                                              <option selected>Pilih Kategori kendaraan</option>
+                                              <option>Golongan 1</option>
+                                              <option>Golongan 2</option>
+                                              <option>Golongan 3</option>
+                                              <option>Golongan 4</option>
+                                              <option>Golongan 5</option>
+                                            </select>
+                                          </div>
+                                          <h5 style="color:  #999">Kapasitas parkir</h5>
+                                        <div class="mb-3 mt-3">
+                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="2">
+                                        </div>
+                                        <div class="mb-1">
+                                            <label for="">Deskripsi Layanan</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit eget tortor facilisis quisque vitae arcu massa.">
+                                         </div>
+
+                                        <a href="/Vendor/Kelola-Kendaraan/setelah_input" class="btn btn-success col-md-12">Simpan</a>
                                 <div>
-                                <h3 style="color:  #999">Kapasitas parkir</h3>
-                                    <div class="row">
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Mobil</label>
-                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="2 buah">
-                                        </div>
-                                          
-                                    </div>
-                                    <div class="row">
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Truk</label>
-                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="2 buah">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Motor</label>
-                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="3 buah">
-                                        </div>
-                                    </div>
-                        
-                                    <div class="row">
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Bus</label>
-                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="3 buah">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Becak</label>
-                                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="3 buah">
-                                        </div>
-                                    </div>
-                                   
-                        
-                                    <button type="button" class="btn btn-outline-success col-md-12 mt-3">Save</button>
+                                </div></div></div></div></div></div></div>
+                                {{-- modal detail --}}
+                                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="container mt-4 mb-4">
+                                                    <div class="">
+                                                        
+                                                        <div class="container">
+                                                            <div class=" mt-3 mb-3" style="max-width: 100%;">
+                                                                <div class="row g-0">
+                                                                    <div class="col-md-6 mt-3" style="padding-top:15px;" >
+                                                                        <img src="{{ asset('../../assets/img/car1.jpg') }}" class="img-fluid rounded-start" style="width:500px; height:400px" alt="...">
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="card-body">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <p class="mb-2" style="font-size: 23px; margin-bottom: 10px">
+                                                                                        <b>Mobil</b> 
+                                                                                    </p>
+                                                                                </div>
+                                                                                
+                                                                                <div class="col-md-6">
+                                                                                    <p class="mb-2 mt-2" style="font-size: 18px; margin-bottom: 10px">
+                                                                                    |  Golongan 3
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <p class="text-success" style="font-size: 18px; margin-bottom: 10px">
+                                                                                <b>IDR 20.000 / HARI</b>
+                                                                            </p>
+                                                                
                                         
-                                 </div>
-                                
-                                </div>
-                                </div>
-                               
-                              </div>
-                        </div>
-     
-                        </div>               </div>
+                                                                                <div class="col-6">
+                                                                                    <p><b>Kapasitas </b> : <span class="num">01</span></p>
+                                                                                </div>
+                                                                                <div class="col-12">
+                                                                                    <p class="text-success" style="font-size: 18px; margin-bottom: 10px">
+                                                                                        <b>Deskripsi layanan</b>
+                                                                                    </p> 
+                                                                                </div>
+                                                                                <div class="col-12 text-muted">
+                                                                                    <p>
+                                                                                        Wijaya - titipsini menyediakan layanan penitipan kendaraan  
+                                                                                        kecil hingga kendaraan besar, dengan kapasitas lahan 250m x 
+                                                                                        250m. Mampu menampung kendaraan hingga 20 kendaraan kecil 
+                                                                                        dan besar. Wijaya - titipsini juga menyediakan layanan konsul untuk
+                                                                                        semua jenis kendaraan
+                                                                                    </p>
+                                                                                </div>
+                                                                                <hr>
+                                                                                <div class="row">
+                                                                                    <div class="col-md-2">
+                                                                                 
+                                                                                        <i class="bi bi-geo-alt-fill" style="font-size: 35px; color:#eab449; margin-bottom: 10px;"></i>
+                                                                                    
+                                                                                    </div>
+                                                                                    
+                                                                                    <div class="col-md-10">
+                                                                                        <p class="mb-2 mt-2" style="font-size: 12px; margin-bottom: 10px">
+                                                                                            Karangjambe, Gg Arjuna No.59, Jaranan,Banguntapan, kec.Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                            </div>
+                                                                </div>
+                                    </div>
                 
 </section>
 @endsection

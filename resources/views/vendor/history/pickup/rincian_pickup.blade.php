@@ -4,7 +4,7 @@
     @section('container')
     <section class="align-items-center services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
   
-            <div class="container mt-4 mb-4">
+            <div class="container mt-4 mb-4 ps-5">
 
                 <div class="row row-cols-1 row-cols-md-2 g-4">
                     <div class="col" style="width: 400px">
@@ -46,7 +46,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col" style="width: 700px">
+                    <div class="col" style="width: 00px">
                       <div class="card">
                         <div class="card-body">
                           <h5 class="card-title"><b>Rincian Order</b></h5>

@@ -1,8 +1,17 @@
-@extends('layouts.vendor')
+@extends('layouts.dashboard_vendor')
 
-<!--hero section-->
-@section('container')
-<section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
+    <!--hero section-->
+    @section('container')
+    <section class="home-section"  >
+        <div class="main">
+            <div class="topbar">
+                <div class="home-content">
+                    <i class='bx bx-menu'></i>
+                </div>
+                <div class="cardHeader-title">
+                    <h2>Penarikan</h2>
+                </div>
+            </div>
     <div class="">
         <div class="container">
             <div class="row g-3">

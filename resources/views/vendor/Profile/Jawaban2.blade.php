@@ -2,8 +2,7 @@
 
 <!--hero section-->
 @section('container')
-<section class="align-items-center"  id="services" style="padding-top: 100px;" data-aos-delay="50">
-       
+<section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
 <div class="container mt-4 mb-4">
 
     <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -54,7 +53,7 @@
                         <a href="#" class="btn btn-success"><i class="bi bi-envelope"></i> Send E-mail</a>
                         <a href="#" class="btn btn-success"><i class="bi bi-telephone"></i> Call Us</a>
                         <div class="d-grid gap-2 mt-2">
-                            <button class="btn btn-success" type="button"  href="#"><img src="../../assets/img/wa.png" width="50px"><b> WhatsApp</b></button>
+                            <button class="btn btn-success" type="button"  href="#"><i class="bi bi-whatsapp" style="font-size: 20px"></i><b> WhatsApp</b></button>
                         </div>
                     </form>
                     </div>

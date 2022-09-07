@@ -2,7 +2,7 @@
 
 <!--hero section-->
 @section('container')
-<section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
+<section class="align-items-center  services"  id="services" style="padding-top: 100px;" data-aos-delay="50">
     <div class="">
         <div class="cardBox1">
             <div class="card2">
@@ -25,7 +25,7 @@
     
             <div class="card1">
                 <div>
-                    <a href=" /Vendor/Kelola-Barang/kelola_barang" style="text-decoration:none">
+                    <a href=" /Vendor/Kelola_Barang/kelola_barangstep1" style="text-decoration:none">
                         <div class="cardName1">Barang
                         </div>
                     </a>
