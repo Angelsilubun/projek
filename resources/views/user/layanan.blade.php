@@ -49,7 +49,7 @@
                 <p class="layanan">{{ $data['sub-title'] }}</p>
             </div>
             <div class="row align-items-center" style=" margin-left:70px;">
-                <div class="col-md-6 col-lg-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-md-6 col-lg-4 d-fle2x align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
                         <div class="img mb-3">
                             <a href="/user/subkategori/subbaru"><img src="{{ asset('assets/img/icon_kendaraan.png') }}" alt="..."></a>

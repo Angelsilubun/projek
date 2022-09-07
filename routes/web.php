@@ -108,10 +108,7 @@ Route::controller(UserController::class)->group(function(){
 
     Route::get('/user/profile/bantuan', 'Bantuan')->middleware('auth');
 });
-<<<<<<< HEAD
-=======
 
->>>>>>> f5010fb3eb765d1f87ebdb394b0768246be64e00
 //admin-tambah layanan
 route::get('/admin/layanan/layanan', [LayananController::class, 'index'])->name('/layanan');
 route::post('/create', [LayananController::class, 'post'])->name('/post');
