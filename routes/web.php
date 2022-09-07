@@ -11,8 +11,8 @@ use App\Http\Controllers\VendorController;
 use App\Http\Controllers\FinanceController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\SubLayananController;
 use App\Http\Controllers\TentangController;
+use App\Http\Controllers\SubLayananController;
 use App\Http\Controllers\SuperadminController;
 /*
 |--------------------------------------------------------------------------
@@ -105,6 +105,7 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/user/Notifikasi', 'Notifikasi')->middleware('auth');
     Route::get('/user/profile/kebijakanprivasi', 'KebijakanPrivasi')->middleware('auth');
     Route::get('/user/profile/bantuan', 'Bantuan')->middleware('auth');
+});
 //admin-tambah layanan
 route::get('/admin/layanan/layanan', [LayananController::class, 'index'])->name('/layanan');
 route::post('/create', [LayananController::class, 'post'])->name('/post');
