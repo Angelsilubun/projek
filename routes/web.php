@@ -578,7 +578,7 @@ Route::get('vendor/keuangan/pemasukan', function () {
 
 
 //Finance
-Route::controller(FinanceContoller::class)->group(function(){
+Route::controller(FinanceController::class)->group(function(){
     Route::get('/finance/page', 'index')->middleware('role:finance')->name('finance.index');
     Route::get('/finance/transaksi/transaksiuser', 'transaksiuser')->middleware('auth');
     Route::get('/finance/transaksi/transaksivendor', 'transaksivendor')->middleware('auth');
