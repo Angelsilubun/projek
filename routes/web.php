@@ -11,6 +11,7 @@ use App\Http\Controllers\VendorController;
 use App\Http\Controllers\FinanceController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubLayananController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\SuperadminController;
 /*
@@ -34,6 +35,11 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //Maps
 Route::get('/map', [MapsController::class, 'maps'])->name('map');
+
+// admin-layanan
+route::get('/layanan', [LayananController::class, 'index'])->name('layanan');
+// admin-sublayanan
+route::get('/sublayanan', [SubLayananController::class, 'index'])->name('sublayanan');
 
 ////////////-----------ADMIN------------/////////////
 Route::controller(AdminController::class)->group(function(){
@@ -578,7 +584,7 @@ Route::get('vendor/keuangan/pemasukan', function () {
 
 
 //Finance
-Route::controller(FinanceContoller::class)->group(function(){
+Route::controller(FinanceController::class)->group(function(){
     Route::get('/finance/page', 'index')->middleware('role:finance')->name('finance.index');
     Route::get('/finance/transaksi/transaksiuser', 'transaksiuser')->middleware('auth');
     Route::get('/finance/transaksi/transaksivendor', 'transaksivendor')->middleware('auth');
