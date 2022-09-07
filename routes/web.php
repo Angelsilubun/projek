@@ -80,7 +80,7 @@ route::post('/create', [LayananController::class, 'post'])->name('/post');
 //admin-sublayanan
 route::get('/sublayanan', [SubLayananController::class, 'index'])->name('/sublayanan');
 route::post('/create', [SubLayananController::class, 'post'])->name('/post');
-route::match(['get', 'post'], '/edit{id}', [SubLayananController::class, 'edit']);
+
 
 
 //user-pemesanan
