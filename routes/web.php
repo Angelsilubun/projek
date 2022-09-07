@@ -15,6 +15,7 @@ use App\Http\Controllers\LayananController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\SubLayananController;
 use App\Http\Controllers\SuperadminController;
 /*
 |--------------------------------------------------------------------------
@@ -71,6 +72,16 @@ Route::get('/user/kontak', [KontakController::class, 'index'])->middleware('auth
 
 //admin kategori layanan
 Route::get('/admin/layanan-kategori/showsubkategori', [AdminController::class, 'kategorilayanan'])->middleware('auth');
+
+//admin-tambah layanan
+route::get('/admin/layanan/layanan', [LayananController::class, 'index'])->name('/layanan');
+route::post('/create', [LayananController::class, 'post'])->name('/post');
+
+//admin-sublayanan
+route::get('/sublayanan', [SubLayananController::class, 'index'])->name('/sublayanan');
+route::post('/create', [SubLayananController::class, 'post'])->name('/post');
+route::match(['get', 'post'], '/edit{id}', [SubLayananController::class, 'edit']);
+
 
 //user-pemesanan
 Route::get('/user/pemesanan/info_pembayaran', function () {

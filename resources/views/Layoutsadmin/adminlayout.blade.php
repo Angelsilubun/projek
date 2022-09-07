@@ -70,6 +70,12 @@
                     <div class="drop-box">
                         <a href="/admin/layanan-kategori/showsubkategori">SubKategori</a>
                     </div>
+                    <div class="drop-box">
+                        <a href="/admin/layanan/layanan">Layanan</a>
+                    </div>
+                    <div class="drop-box">
+                        <a href="{{route('/sublayanan')}}">Layanan</a>
+                    </div>
                 </div>
             </li>
             <li class="list {{ Request::segment(2) == 'data' ? 'active' : '' }}">

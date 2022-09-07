@@ -1,30 +1,30 @@
 <?php
 
 namespace App\Http\Controllers;
-use Alert;
-use App\Models\Layanan;
-use Auth;
-use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 
-class LayananController extends Controller
+use App\Models\SubLayanan;
+use Illuminate\Http\Request;
+
+class SubLayananController extends Controller
 {
     public function index()
     {
-        $layanan = Layanan::all();
-        return view('admin.layanan.layanan', compact('layanan'));
+        $sublayanan = SubLayanan::all();
+        return view('admin.layanan.sub_layanan', compact('sublayanan'));
     }
 
     public function post(Request $request)
     {
         $this->validate($request, [
-            'judul' => '',
-            'slug' => '',
-            'deskripsi' => '',
+            'nama' => '',
+            'harga' => '',
+            'alamat' => '',
+            'status1' => '',
+            'status2' => '',
             'gambar' => 'mimes:jpg,jpeg,png'
         ]);
 
-        Layanan::create([
+        SubLayanan::create([
             'judul' => $request->input('judul'),
             'slug' => $request->input('slug'),
             'deskripsi' => $request->input('deskripsi'),
@@ -37,13 +37,13 @@ class LayananController extends Controller
     {
         if($request->isMethod('post'))
         {
-            $layanan = $request->all();
+            $sublayanan = $request->all();
 
-            Layanan::where(['id' => $id])->update([
-                'judul' => $layanan['judul'],
-                'slug' => $layanan['slug'],
-                'deskripsi' => $layanan['deskripsi'],
-                'gambar' => $layanan['gambar']
+            SubLayanan::where(['id' => $id])->update([
+                'judul' => $sublayanan['judul'],
+                'slug' => $sublayanan['slug'],
+                'deskripsi' => $sublayanan['deskripsi'],
+                'gambar' => $sublayanan['gambar']
             ]);
 
             return redirect()->back()->with('berhasil', 'Layanan berhasil diupdate');
@@ -52,9 +52,9 @@ class LayananController extends Controller
 
     public function show($id)
     {
-        Layanan::where(['id' => $id]);
+        SubLayanan::where(['id' => $id]);
 
-        return view('admin.layanan.layanan');
+        return view('admin.layanan.sub_layanan');
     }
 
 }
