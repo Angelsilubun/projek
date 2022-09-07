@@ -11,7 +11,7 @@
             <div
                        class="card-profile d-flex justify-content-center align-items-center py-3 rounded-lg flex-column">
                        <div class="person-img px-xl-5"><br>
-                           <img src="{{ asset('assets/img/team-4.jpg') }}" class="img-fluid rounded-circle" alt="">
+                           <img src="{{ asset('../../assets/img/team-4.jpg') }}" class="img-fluid rounded-circle" alt="">
                        </div>
                        <div class="person-name">
                            <h2 class="text-center fs-4 my-2">Admin</h2>

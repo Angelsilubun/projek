@@ -1,13 +1,22 @@
-@extends('layouts.vendor')
+@extends('layouts.dashboard_vendor')
 
 <!--hero section-->
 @section('container')
-<section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
+<section class="home-section">
+    <div class="main">
+        <div class="topbar">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="cardHeader-title">
+                <h2>Kelola Pick Up</h2>
+            </div>
+        </div>
     <div class="">
         <div class="cardBox1">
             <div class="card1">
                 <div>
-                    <a href="/Vendor/Kelola-Kendaraan/kelola_kendaraan" style="text-decoration:none">
+                    <a href="/vendor/Kelola-Kendaraan/kelola_kendaraan" style="text-decoration:none">
                         <div class="cardName1">Kendaraan
                         </div>
                     </a>
@@ -16,7 +25,7 @@
     
             <div class="card1">
                 <div>
-                    <a href="/Vendor/Kelola-Bangunan/kelola_bangunan" style="text-decoration:none">
+                    <a href="/vendor/Kelola-Bangunan/kelola_bangunan" style="text-decoration:none">
                         <div class="cardName1">Bangunan
                         </div>
                     </a>
@@ -25,7 +34,7 @@
     
             <div class="card1">
                 <div>
-                    <a href="/Vendor/Kelola-Barang/kelola_barang" style="text-decoration:none">
+                    <a href="/vendor/Kelola-Barang/kelola_barang" style="text-decoration:none">
                         <div class="cardName1">Barang
                         </div>
                     </a>
@@ -33,7 +42,7 @@
             </div>
             <div class="card2">
                 <div>
-                    <a href="/Vendor/Kelola-PickUp/kelola_pickup" style="text-decoration:none">
+                    <a href="/vendor/Kelola-PickUp/kelola_pickup" style="text-decoration:none">
                         <div class="cardName2">Pick Up
                         </div>
                     </a>
@@ -42,18 +51,10 @@
         </div>
     
     
-         <div class="container mt-4 mb-4">
-
-    <div class="row  ">
-        <div class="col" style="width: 800px">
-          
-
-                    <div class="row ">
-                        <div class="">
-                            <div class="card" style="background-color: #fff;">
-                                <div class="card-body">
-                                    <i class="bi bi-arrow-left px-2 "></i><b>Kelola Pick Up</b><hr>
-                                
+        <div class="container mt-4 mb-4 " >
+            <div class="row justify-content-center">
+                    <div class="card" style="background-color: #fff; width:85% ">
+                        <div class="card-body mt-3">
                                     <p><b>Tambah layanan Pick Up!</b>
                                     <p class="text-muted">Daftarkan layanan pick up anda dengan mengisi
                                         data dibawah ini</p><br>
@@ -84,7 +85,7 @@
                                             </p>
                                         </div>
                                         <div class="col-md-2 mb-">
-                                            <a href="/Vendor/Kelola-PickUp/layanan_step3" ><button type="button" class="btn btn-success mb-3" data-toggle="modal" data-target="#staticBackdrop">
+                                            <a href="/Vendor/Kelola-PickUp/layanan_step3" data-bs-toggle="modal" data-bs-target="#exampleModal"><button type="button" class="btn btn-success mb-3" >
                                                 Tambah
                                               </button></a>
                                           
@@ -114,6 +115,24 @@
                     sesuai.</p>
             </label>
 
+              </div>
+
+              
+              <div class="file-upload">
+                <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Tambahkan foto</button>
+              
+                <div class="image-upload-wrap">
+                  <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                  <div class="drag-text"><br>
+                  <p>Tidak ada foto yang dipilih</p>
+                  </div>
+                </div>
+                <div class="file-upload-content">
+                  <img class="file-upload-image" src="#" alt="your image" />
+                  <div class="image-title-wrap">
+                    <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                  </div>
+                </div>
               </div>
         <P><b>Kendaraan</b></P>
         <div class="form-check">
@@ -148,7 +167,10 @@
                 akan beroperasi. </P>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder=""></textarea>
      </div>
-        
+     <div class="mb-3 mt-2">
+        <label for="">Masukan harga </label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Rp20.000">
+    </div>
         <a href=" /Vendor/Kelola-Bangunan/pengelolaan_barang2"><button type="button" class="btn btn-success col-md-12 mt-3">Lanjutkan</button><br><br></a>
       </div>
     </div>

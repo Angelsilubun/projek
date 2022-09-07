@@ -1,8 +1,17 @@
-@extends('layouts.vendor')
+@extends('layouts.dashboard_vendor')
 
 <!--hero section-->
 @section('container')
-<section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
+<section class="home-section">
+    <div class="main">
+        <div class="topbar">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="cardHeader-title">
+                <h2>Kelola Bangunan</h2>
+            </div>
+        </div>
     <div class="">
         <div class="cardBox1">
             <div class="card2">
@@ -40,15 +49,10 @@
                 </div>
             </div>
         </div>
-    
-    
-         <div class="container mt-4 mb-4">
-            <div class="container mt-4 mb-4 " >
+            <div class="container mt-4 mb-5" >
                 <div class="row justify-content-center">
                         <div class="card" style="background-color: #fff; width:70% ">
                             <div class="card-body">
-                          
-                                <a href="/Vendor/Kelola-Kendaraan/"><i class="bi bi-arrow-left px-2 "></i><b>Kelola Kendaraan</b><hr></a>
                                     <p><b>Tambah layanan Lahan Parkir!</b>
                                     <p class="text-muted">Daftarkan tempat parkir anda dengan 
                                         mengisi data dibawah ini</p><br>

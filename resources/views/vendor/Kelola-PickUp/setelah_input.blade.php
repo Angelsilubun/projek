@@ -1,8 +1,17 @@
-@extends('layouts.vendor')
+@extends('layouts.dashboard_vendor')
 
 <!--hero section-->
 @section('container')
-<section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
+<section class="home-section">
+    <div class="main">
+        <div class="topbar">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="cardHeader-title">
+                <h2>Kelola Pick Up</h2>
+            </div>
+        </div>
     <div class="p-3">
         <div class="cardBox1">
             <div class="card1">
@@ -42,78 +51,85 @@
         </div>
     
     
-    <div class="p-5 container card" style="width: 70%" >    
-        <div class="card mt-3">
-            <h5 class="card-header bg-success text-white">Detail kelola Pick Up</h5>
-            <div class="card-body">
-                <div class="mb-3" style="max-width: auto;">
-                    <div class="row g-0">
-                      <div class="col-md-auto">
-                        <h5><i class="bi bi-geo-fill" style="font-size: 30px; color:  #ce4c15; ps-2"></i><b>Alamat </b></h5>
-                        <div class="card-body">
-                            <p class="card-text">Karangjambe, Gg Arjuna No.59, Jaranan,Banguntapan, kec.Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198</p>
-                       
-                          </div>
-                </div>   
-                            <h5><i class="bi bi-truck p-2" style="font-size: 25px; color:  #ce4c15; "></i><b>Jenis Pick Up</b></h5>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3 ">
-                                        <p>Jenis Kendaraan</p>
-                                    </div>
-                                    <div class="col-md-auto">
-                                        <p class="text-end">: Mobil PIck Up</p>
-                                    </div>   
-                                </div>
-                                
-                             </div>          
-                
-
-                    </div>
-                    <a href="#" class="btn btn-outline-success  col-md-2"  data-bs-toggle="modal" data-bs-target="#Modal">Hapus</a>
-                  <a href="#" class="btn btn-outline-success  col-md-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</a>
-                </div>
-                </div>
+    <div class="p-5 container card" style="width: 90%" >    
+      <a href="/Vendor/Kelola-PickUp/layanan_step1 " ><button class="btn btn-success p-2  " style="font-size: 20px"><i  class="bi bi-plus"></i>Tambah layanan</button></a>
+      <div class="details1 ">
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Detail Kelola Pick Up</h2>
+                <a href="#" class="btn btn-thema">View All</a>
             </div>
-            
-                 
-                    <div class="card mt-5">
-                    <h5 class="card-header bg-success text-white">Detail kelola Pick Up</h5>
-                    <div class="card-body">
-                        <div class="mb-3" style="max-width: auto;">
-                            <div class="row g-0">
-                              <div class="col-md-auto">
-                                <h5><i class="bi bi-geo-fill p-2" style="font-size: 25px; color: #ce4c15;"></i><b>Alamat</b></h5>
-                                <div class="card-body">
-                                    <p class="card-text">Karangjambe, Gg Arjuna No.59, Jaranan,Banguntapan, kec.Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198</p>
-                               
-                                  </div>
-                        </div>   
-                                    <h5><i class="bi bi-truck p-2" style="font-size: 25px; color: #fd7e14; "></i><b>Jenis Pick Up</b></h5>
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-3 ">
-                                                <p>Jenis Pick Up</p>
-                                            </div>
-                                            <div class="col-md-auto">
-                                                <p class="text-end">: Truk</p>
-                                            </div>   
-                                        </div>
-                                    </div>
-                        </div>          
+            <table class="table-borderless mt-3 w-auto">
+                <thead class="text-start">
+                    <tr>
+                        <td>Gambar</td>
+                        <td class="col-md-2">Jenis PickUp</td>
+                        <td>Harga</td>
+                        <td>Action</td>
                         
-                            <a href="#" class="btn btn-outline-success  col-md-2"  data-bs-toggle="modal" data-bs-target="#Modal">Hapus</a>
-                          <a href="#" class="btn btn-outline-success  col-md-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</a>
-                        </div>
-                        </div>
-                    
-                    </div>
-                        <a href="/Vendor/Kelola-PickUp/layanan_step1"><button class="col-sm-12 btn btn-outline-success mt-5">Tambah Layanan</button></a>
-                        </div>
-                      
-                        </div>
-                        
-
+                    </tr>
+                </thead>
+                <tbody class="text-start">
+                    <tr>
+                        <td><img src="" alt=""></td>
+                        <td>Motor</td>
+                        <td>Rp20.000</td>
+                        <td class="col-md-2">
+                            <a href="" class="btn btn-info "data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-info-circle"></i><a>
+                            <a href="" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="bi bi-pencil-square"></i></a>
+                            <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal"><i class="bi bi-trash"></i></a>
+                        </td>
+                       
+                        <!-- <td><span class="status return">Return</span></td> -->
+                    </tr>
+                    <tr>
+                        <td><img src="" alt=""></td>
+                        <td>Truk</td>
+                        <td>Rp20.000</td>
+                        <td class="col-md-2">
+                            <a href="" class="btn btn-info "data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-info-circle"></i><a>
+                            <a href="" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="bi bi-pencil-square"></i></a>
+                            <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal"><i class="bi bi-trash"></i></a>
+                        </td>
+                       
+                        <!-- <td><span class="status return">Return</span></td> -->
+                    </tr>
+                    <tr>
+                        <td><img src="" alt=""></td>
+                        <td>motor</td>
+                        <td>Rp20.000</td>
+                        <td class="col-md-2">
+                            <a href="" class="btn btn-info "data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-info-circle"></i><a>
+                            <a href="" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="bi bi-pencil-square"></i></a>
+                            <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal"><i class="bi bi-trash"></i></a>
+                        </td>
+                        <!-- <td><span class="status return">Return</span></td> -->
+                    </tr>
+                    <tr>
+                        <td><img src="" alt=""></td>
+                        <td>Mobil</td>
+                        <td>Rp20.000</td>
+                        <td class="col-md-2">
+                            <a href="" class="btn btn-info "data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-info-circle"></i><a>
+                            <a href="" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="bi bi-pencil-square"></i></a>
+                            <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal"><i class="bi bi-trash"></i></a>
+                        </td>
+                        <!-- <td><span class="status return">Return</span></td> -->
+                    </tr>
+                    <tr>
+                        <td><img src="" alt=""></td>
+                        <td >Mobil PickUp</td>
+                        <td>Rp20.000</td>
+                        <td class="col-md-2">
+                            <a href="" class="btn btn-info "data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-info-circle"></i><a>
+                            <a href="" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="bi bi-pencil-square"></i></a>
+                            <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#Modal"><i class="bi bi-trash"></i></a>
+                        </td>
+                        <!-- <td><span class="status return">Return</span></td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
                         <!--MODAL HAPUS-->
                         <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -142,6 +158,22 @@
                                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
+                                    <div class="file-upload">
+                                        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Edit foto</button>
+                                      
+                                        <div class="image-upload-wrap">
+                                          <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+        
+                                          <img src="../../assets/img/mobil.jpg" alt="" style="width: 100%; height:100%">
+                                          
+                                        </div>
+                                        <div class="file-upload-content">
+                                          <img class="file-upload-image" src="#" alt="your image" />
+                                          <div class="image-title-wrap">
+                                            <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                                          </div>
+                                        </div>
+                                      </div>
                                 <h3 style="color:  #999">Edit Alamat</h3>
                                 <div class="container">
                                     <div class="row row-cols-1 row-cols-md-12 g-4">
@@ -156,7 +188,6 @@
                                                     <option>DI Yogyakarta</option>
                                                     <option>Jawa Timur</option>
                                                     <option>Kalimantan Timur</option>
-                          
                                                   </select>
                                                 </div>
                           
@@ -228,15 +259,84 @@
                                                     Truk
                                                         </label>
                                                     </div> 
+                                                    <div class="mb-2">
+                                                        <label for="">Harga </label>
+                                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Rp20.000">
+                                                     </div>
+                                                     <div class="mb-3">
+                                                        <label for="">Deskripsi Layanan</label>
+                                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit eget tortor facilisis quisque vitae arcu massa.">
+                                                     </div>
                                           </form>
                                         </div> 
                                 <div>
-                                    <a href=" /Vendor/Kelola_Barang/setelah_input"><button type="button" class="btn btn-outline-success col-md-12 mt-3">Save</button></a>     
+                                    <a href=" /Vendor/Kelola-PickUp/setelah_input"><button type="button" class="btn btn-outline-success col-md-12 mt-3">Save</button></a>     
                                  </div>
                                 </div>
                                 </div>
                               </div>
                             </div>
                         </div>
+      </div></div>
+
+                        
+                           {{-- modal detail --}}
+                           <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="container mt-4 mb-4">
+                                        <div class="">
+                                            
+                                            <div class="container">
+                                                <div class=" mt-3 mb-3" style="max-width: 100%;">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-6 mt-3" style="padding-top:15px;" >
+                                                            <img src="{{ asset('../../assets/img/car1.jpg') }}" class="img-fluid rounded-start" style="width:500px; height:400px" alt="...">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-md-12">
+                                                                        <p class="mb-2" style="font-size: 23px; margin-bottom: 10px">
+                                                                            <b>Mobil PickUp</b> 
+                                                                        </p>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                                <p class="text-success" style="font-size: 18px; margin-bottom: 10px">
+                                                                    <b>IDR 20.000 </b></p>
+                                                               
+                                                                    <div class="col-12">
+                                                                        <p class="text-success" style="font-size: 18px; margin-bottom: 10px">
+                                                                            <b>Deskripsi layanan</b>
+                                                                        </p> 
+                                                                    </div>
+                                                                    <div class="col-12 text-muted">
+                                                                        <p>
+                                                                            Wijaya - titipsini menyediakan layanan penitipan kendaraan  
+                                                                            kecil hingga kendaraan besar, dengan kapasitas lahan 250m x 
+                                                                            250m. Mampu menampung kendaraan hingga 20 kendaraan kecil 
+                                                                            dan besar. Wijaya - titipsini juga menyediakan layanan konsul untuk
+                                                                            semua jenis kendaraan
+                                                                        </p>
+                                                                    </div>
+                                                                    <hr>
+                                                                    <div class="row">
+                                                                        <div class="col-md-2">
+                                                                     
+                                                                            <i class="bi bi-geo-alt-fill" style="font-size: 35px; color:#eab449; margin-bottom: 10px;"></i>
+                                                                        
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-md-10">
+                                                                            <p class="mb-2 mt-2" style="font-size: 12px; margin-bottom: 10px">
+                                                                                Karangjambe, Gg Arjuna No.59, Jaranan,Banguntapan, kec.Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                </div>
+                                                    </div>
+                        </div>
+    
 </section>
 @endsection

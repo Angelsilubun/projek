@@ -1,10 +1,19 @@
 
-@extends('layouts.vendor')
+@extends('layouts.dashboard_vendor')
 
 <!--hero section-->
 @section('container')
-<section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
-<div class="card">
+<section class="home-section">
+    <div class="main">
+        <div class="topbar">
+            <div class="home-content">
+                <i class='bx bx-menu'></i>
+            </div>
+            <div class="cardHeader-title">
+                <h2>Kelola Kendaraan</h2>
+            </div>
+        </div>
+<div class="">
         <div class="cardBox1">
             <div class="card2">
                 <div>
@@ -14,7 +23,6 @@
                     </a>
                 </div>
             </div>
-    
             <div class="card1">
                 <div>
                     <a href="Vendor/Kelola-Bangunan/kelola_bangunan" style="text-decoration:none">
@@ -23,7 +31,6 @@
                     </a>
                 </div>
             </div>
-    
             <div class="card1">
                 <div>
                     <a href="Vendor/Kelola-Barang/kelola_barang" style="text-decoration:none">
@@ -42,14 +49,11 @@
             </div>
         </div>
     
-    
          <div class="container mt-4 mb-4 " >
                     <div class="row justify-content-center">
-                            <div class="card" style="background-color: #fff; width:70% ">
-                                <div class="card-body">
+                            <div class="card" style="background-color: #fff; width:85% ">
+                                <div class="card-body mt-3">
                               
-                                    <a href="/Vendor/Kelola-Kendaraan/kelola_kendaraan"><i class="bi bi-arrow-left px-2 "></i><b>Kelola Kendaraan</b><hr></a>
-                                
                                     <p><b>Tambah layanan lahan parkir!</b>
                                     <p class="text-muted">Daftarkan tempat parkir anda dengan mengisi data 
                                         dibawah ini</p>
@@ -94,10 +98,8 @@
                                         <div class="col-md-2 mb-3">
                                           <a href=""></a>
                                         </div>   
-                                       
                                      </div>
                                     </div>
-                       
                                 </div>
                             </div>
                         </div>

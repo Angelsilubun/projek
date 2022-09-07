@@ -1,14 +1,23 @@
 
- @extends('layouts.vendor')
+ @extends('layouts.dashboard_vendor')
 
  <!--hero section-->
  @section('container')
- <section class="align-items-center  services section-bg"  id="services" style="padding-top: 100px;" data-aos-delay="50">
+ <section class="home-section">
+     <div class="main">
+         <div class="topbar">
+             <div class="home-content">
+                 <i class='bx bx-menu'></i>
+             </div>
+             <div class="cardHeader-title">
+                 <h2>Kelola Bangunan</h2>
+             </div>
+         </div>
     <div class="">
         <div class="cardBox1">
             <div class="card2">
                 <div>
-                    <a href="Vendor/Kelola-barang/kelola_barang" style="text-decoration:none">
+                    <a href="/vendor/Kelola-barang/kelola_barang" style="text-decoration:none">
                         <div class="cardName2">Kendaraan
                         </div>
                     </a>
@@ -17,7 +26,7 @@
     
             <div class="card1">
                 <div>
-                    <a href="Vendor/Kelola-Bangunan/kelola_bangunan" style="text-decoration:none">
+                    <a href="/vendor/Kelola-Bangunan/kelola_bangunan" style="text-decoration:none">
                         <div class="cardName1">Bangunan
                         </div>
                     </a>
@@ -26,7 +35,7 @@
     
             <div class="card1">
                 <div>
-                    <a href="Vendor/Kelola-Barang/kelola_barang" style="text-decoration:none">
+                    <a href="/vendor/Kelola-Barang/kelola_barang" style="text-decoration:none">
                         <div class="cardName1">Barang
                         </div>
                     </a>
@@ -34,24 +43,17 @@
             </div>
             <div class="card1">
                 <div>
-                    <a href="Vendor/Kelola-PickUp/kelola_pickup" style="text-decoration:none">
+                    <a href="/vendor/Kelola-PickUp/kelola_pickup" style="text-decoration:none">
                         <div class="cardName1">Pick Up
                         </div>
                     </a>
                 </div>
             </div>
         </div>
-    
-    
-         <div class="container mt-4 mb-4">
-
-            <div class="container mt-4 mb-4 " >
+            <div class="container mt-4 mb-5 " >
                 <div class="row justify-content-center">
                         <div class="card" style="background-color: #fff; width:70% ">
                             <div class="card-body">
-                          
-                                <a href="/Vendor/Kelola-Kendaraan/layanan_step2"><i class="bi bi-arrow-left px-2 "></i><b>Kelola Kendaraan</b><hr></a>
-                                
                                     <p><b>Tambah layanan lahan parkir!</b>
                                     <p class="text-muted">Daftarkan tempat parkir Anda dengan 
                                         mengisi data dibawah ini</p><br>
@@ -99,7 +101,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                          </div>
           </div>
         </div>
     </section>

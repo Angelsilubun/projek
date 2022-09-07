@@ -56,6 +56,14 @@
                 </div>    
             </div>
           
+            <div class="row">
+                <div class="col-md">
+                    <p><i class="bi bi-question-circle px-1"  style="color:rgb(85, 182, 91)"></i>Pusat Bnatuan</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="text-end"><a href="/Vendor/Profile/Pusat_bantuan"><i class="bi bi-chevron-right"></i></a></p>
+                </div>    
+            </div>
             <div class="row " data-bs-toggle="modal" data-bs-target="#ModalLogout">
                 <div class="col-md">
                     <p><i class='bx bx-log-out nav__icon link_name'  style="color:rgb(85, 182, 91)"></i>Logout</p>

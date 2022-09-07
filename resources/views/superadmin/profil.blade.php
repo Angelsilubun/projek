@@ -14,10 +14,7 @@
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
-                <div data-aos="fade-left">
-                    <i class='bx bx-notification'></i>
-                    <img src="../assets/img/foto1.jpg" class="rounded-circle" style="width: 40 px" alt=""> SuperAdmin
-                </div>
+               
             </div>
 
             <div class="container-fluid mt-4">
@@ -30,7 +27,7 @@
                 {{-- Card User Profile --}}
                 <div class="row g-3" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50"
                     data-aos-duration="1000">
-                    <div class="col-lg-4 col-md-6 mt-4 pe-2">
+                    <div class="col-lg-4 col-md-6 mt-4 pe-2 mb-5">
                         <div
                             class="card-profile d-flex justify-content-center align-items-center py-3 rounded-lg flex-column">
                             <div class="person-img px-xl-5">
