@@ -17,8 +17,10 @@ class SubLayananController extends Controller
     {
         $this->validate($request, [
             'nama' => '',
-            'slug' => '',
-            'deskripsi' => '',
+            'harga' => '',
+            'alamat' => '',
+            'status1' => '',
+            'status2' => '',
             'gambar' => 'mimes:jpg,jpeg,png'
         ]);
 

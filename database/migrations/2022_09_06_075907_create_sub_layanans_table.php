@@ -24,8 +24,8 @@ return new class extends Migration
             $table->enum('status2',['buka', 'tutup']);
             $table->boolean('fitur')->default(false);
             $table->unsignedInteger('quantity')->default(10);
-            $table->string('image')->nullable();
-            $table->text('images')->nullable();
+            $table->string('gambar')->nullable();
+            $table->text('gambars')->nullable();
             $table->bigInteger('layanan_id')->unsigned()->nullable();
             $table->timestamps();
         });
