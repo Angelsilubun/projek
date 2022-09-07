@@ -11,6 +11,7 @@ use App\Http\Controllers\VendorController;
 use App\Http\Controllers\FinanceController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubLayananController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\SuperadminController;
 /*
@@ -34,6 +35,11 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //Maps
 Route::get('/map', [MapsController::class, 'maps'])->name('map');
+
+// admin-layanan
+route::get('/layanan', [LayananController::class, 'index'])->name('layanan');
+// admin-sublayanan
+route::get('/sublayanan', [SubLayananController::class, 'index'])->name('sublayanan');
 
 ////////////-----------ADMIN------------/////////////
 Route::controller(AdminController::class)->group(function(){
@@ -99,6 +105,109 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/user/Notifikasi', 'Notifikasi')->middleware('auth');
     Route::get('/user/profile/kebijakanprivasi', 'KebijakanPrivasi')->middleware('auth');
     Route::get('/user/profile/bantuan', 'Bantuan')->middleware('auth');
+//admin-tambah layanan
+route::get('/admin/layanan/layanan', [LayananController::class, 'index'])->name('/layanan');
+route::post('/create', [LayananController::class, 'post'])->name('/post');
+
+//admin-sublayanan
+route::get('/sublayanan', [SubLayananController::class, 'index'])->name('/sublayanan');
+route::post('/create', [SubLayananController::class, 'post'])->name('/post');
+
+
+
+//user-pemesanan
+Route::get('/user/pemesanan/info_pembayaran', function () {
+    return view('/user/pemesanan/info_pembayaran',[
+        "title" => "pembayaran"
+    ]);
+});
+
+//user-pemesanan-history
+Route::get('/user/pemesanan/History/Last_Progress', function () {
+    return view('/user/pemesanan/History/Last_Progress',[
+        "title" => "history"
+    ]);
+});
+
+//user-pemesanan-pemesanan
+Route::get('/user/pemesanan/History/On_Progress', function () {
+    return view('/user/pemesanan/History/On_Progress',[
+        "title" => "pesanan"
+    ]);
+});
+
+Route::get('/user/pemesanan/History/On_Progress', function () {
+    return view('/user/pemesanan/History/On_Progress',[
+        "title" => "history"
+    ]);
+});
+
+Route::get('/user/pemesanan/struk', function () {
+    return view('/user/pemesanan/struk',[
+        "title" => "Struk"
+    ]);
+});
+
+Route::get('/user/pemesanan/konfirm_pembayaran', function () {
+    return view('/user/pemesanan/konfirm_pembayaran',[
+        "title" => "Konfirmasi Pembayaran"
+    ]);
+});
+
+Route::get('/user/pemesanan/pemesanan', function () {
+    return view('/user/pemesanan/pemesanan',[
+        "title" => "Pemesanan"
+    ]);
+});
+
+//profile user
+Route::get('/user/profile/profileuser', function () {
+    return view('/user/profile/profileuser',[
+        "title" => "Profile User"
+    ]);
+});
+
+Route::get('/user/profile/edit_profile', function () {
+    return view('/user/profile/edit_profile',[
+        "title" => "Edit Profile"
+    ]);
+});
+
+
+Route::get('/user/profile/Alamat', function () {
+    return view('/user/profile/Alamat',[
+        "title" => "Alamat"
+    ]);
+});
+
+Route::get('/user/profile/edit_alamat', function () {
+    return view('/user/profile/edit_alamat',[
+        "title" => "Edit alamat"
+    ]);
+});
+
+Route::get('/user/profile/Tambah_alamat', function () {
+    return view('/user/profile/Tambah_alamat',[
+        "title" => "Tambah Alamat"
+    ]);
+});
+
+Route::get('/user/Notifikasi', function () {
+    return view('/user/Notifikasi',[
+        "title" => "Notifikasi"
+    ]);
+});
+
+Route::get('/user/profile/kebijakanprivasi', function () {
+    return view('/user/profile/kebijakanprivasi',[
+        "title" => "Kebijakan Privasi"
+    ]);
+});
+
+Route::get('/user/profile/bantuan', function () {
+    return view('/user/profile/bantuan',[
+        "title" => "Bantuan"
+    ]);
 });
 
 Route::get('/user/bantuan/Jawaban1', function () {
