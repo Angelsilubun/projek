@@ -52,7 +52,7 @@
         </div>
     
     
-        <div class="ps-5 container" style="width: 800px">
+        <div class="ps-5 container" style="width: 80%; font-size:20px">
             <div class="card">
               <div class="card-body">
                 <form action="">

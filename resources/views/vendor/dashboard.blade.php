@@ -1,12 +1,14 @@
 @extends('Layouts.dashboard_vendor')
 @section('container')
 <section class="home-section">
-
     <div class="main">
         <div class="topbar">
             <!-- Extend Navbar >> bermasalah khusus dashboard -->
             <div class="home-content">
                 <i class='bx bx-menu'></i>
+            </div>
+            <div class="text-end col-lg-8" style="font-size: 30px">
+                <i class="bi bi-bell"  id="liveToastBtn"></i>
             </div>
             <!-- Search -->
             <div class="search" data-aos="fade-left" data-aos-duration="1000">
@@ -57,35 +59,14 @@
                     </div>
                  </div>
             </a>
-           
-            <div class="card border-0">
-                <div class="card-body">
-                    <div class="numbers">12 <span class="badge bg-danger mt-2 mb-2" style="font-size: 10px">New</span></div>
-                    <div class="cardName" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Notifikasi</div>
-                </div>
-                <div class="iconBx card-img-overlay">
-                    <ion-icon name="notifications" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></ion-icon>
-                </div>
-            </div>
-
             <div class="card border-0">
                 <div class="card-body">
                     <div class="numbers">20 <span class="badge bg-danger mt-2 mb-2" style="font-size: 10px">New</span></div>
                     <div class="cardName">Pesan</div>
                 </div>
                 <div class="iconBx card-img-overlay">
-                    <ion-icon name="chatbox-ellipses" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample2"></ion-icon>
+                    <ion-icon name="chatbox-ellipses" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"></ion-icon>
                 </div>
-            </div>
-        </div>
-
-        <!-- Chart -->
-        <div class="graphBox">
-            <div class="card border-0 w-auto">
-                <canvas id="myChart"></canvas>
-            </div>
-            <div class="card border-0 w-auto">
-                <canvas id="earning"></canvas>
             </div>
         </div>
 
@@ -204,175 +185,119 @@
 
 
 
-
-    <div class="row col-md-12 " style="padding-top: 350px; padding-left:400px">
-        <div class="col-md-6">
-          <div class="collapse multi-collapse" id="multiCollapseExample1">
-            <div class="card card-body">
-                <div class="card-header row">
-                    <div class="col-md-11">
-                         <p class="mt-2" style="font-size: 20px">Pesan (20)</p>
-                    </div>
-                    <div class="col-md-1">
-                       <a href="/vendor/dashboard"> <i class="bi bi-x text-end" style="font-size: 2rem"></i></a>
-                    </div>
+{{-- collapse chat --}}
+     <div class="collapse multi-collapse" id="multiCollapseExample1"  style="min-height: 120px; padding-left:50%; padding-top:20px">
+      <div class="card card-body" style="width: 600px;">
+            <div class="row">
+                <div class="col-md-8">
+                <h3 class="">Pesan masuk (2)</h3>
                 </div>
-        
-
-            <div class="row ">
-                <div class=" col-md-12 rounded-top card mt-1 ">
-                    <div class="row mt-2">
-                            <div class="col-md-2 image">
-                                <img src="http://nicesnippets.com/demo/man01.png" class="rounded">
+                <div class="col-md-4 text-end ">
+                <a href="/vendor/dashboard">
+                  <i class="bi bi-x-lg"></i>
+                </a>
+                </div>
+                </div>
+              
+                  <div class="messaging">
+                        <div class="inbox_msg">
+                          <div class="inbox_people">
+                            <div class="headind_srch">
+                              <div class="recent_heading">
+                                <h4>Recent</h4>
+                              </div>
+                              <div class="srch_bar">
+                                <div class="stylish-input-group">
+                                  <input type="text" class="search-bar"  placeholder="Search" >
+                                  <span class="input-group-addon">
+                                  <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                                  </span> </div>
+                              </div>
                             </div>
-                            <div class="col-md-8">
-                                <H6 data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Dila__</H6>
-                                <p class="text-muted" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Barang apa saja yang bisa di titipkan?</p>
-                                
+                            <div class="inbox_chat">
+                              <div class="chat_list active_chat">
+                                <div class="chat_people">
+                                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                  <div class="chat_ib">
+                                    <h5>Rebbeca Howard (3)</h5>
+                                    <p>
+                                    hellooooo!!
+                                    </p>
+                                    <span class="time_date text-muted text-end" style="font-size: 10px" >5 mei 2022</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="chat_list">
+                                <div class="chat_people">
+                                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                  <div class="chat_ib">
+                                    <h5>Rebbeca Howard (2)</h5>
+                                    <p>which is a new approach to have all solutions 
+                                      astrology under one roof.</p>
+                                      <span class="time_date text-muted text-end" style="font-size: 10px" >5 mei 2022</span>
+                                  </div>
+                                </div>
+                              </div>
+                             
                             </div>
-                            <div class="col-md-2 text-end">
-                                <span class="float-right time text-dark">12:10</span><br>
-                                <span class="badge bg-danger badge rounded-pill p-1" style="font-size: 15px" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">12</span>
+                          </div>
+                          <div class="mesgs">
+                            <div class="msg_history">
+                              <div class="incoming_msg">
+                                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                <div class="received_msg">
+                                  <div class="received_withd_msg">
+                                    <p>HELLO!!
+                                      Terimakasih sudah mengunjungi kami
+                                    </p>
+                                    <span class="time_date"> 11:01 WIB   |  5 mei 2022</span></div>
+                                </div>
+                              </div>
+                              <div class="outgoing_msg">
+                                <div class="sent_msg">
+                                  <p>Jasa penitipan apa saja yang ada di layanan anda?</p>
+                                  <span class="time_date"> 11:01 WIB   |   9 juni 2022</span> </div>
+                              </div>
                             
+                              <div class="outgoing_msg">
+                                <div class="sent_msg">
+                                  <p>Apakah saya dapat menitipkan barang?</p>
+                                  <span class="time_date"> 11:01 WIB |   Hari ini</span> </div>
+                              </div>
+                             
                             </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row ">
-                <div class=" col-md-12 rounded-top card mt-1 ">
-                    <div class="row mt-2">
-                            <div class="col-md-2 image">
-                                <img src="http://nicesnippets.com/demo/man01.png" class="rounded">
+                            <div class="type_msg">
+                              <div class="input_msg_write">
+                                <input type="text" class="write_msg" placeholder="Type a message" />
+                                <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                              </div>
                             </div>
-                            <div class="col-md-8">
-                                <H6 data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Dila__</H6>
-                                <p class="text-muted" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Barang apa saja yang bisa di titipkan?</p>
-                                
-                            </div>
-                            <div class="col-md-2 text-end">
-                                <span class="float-right time text-dark">12:10</span><br>
-                                <span class="badge bg-danger badge rounded-pill p-1" style="font-size: 15px" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">12</span>
-                            
-                            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row ">
-                <div class=" col-md-12 rounded-top card mt-1 ">
-                    <div class="row mt-2">
-                            <div class="col-md-2 image">
-                                <img src="http://nicesnippets.com/demo/man01.png" class="rounded">
-                            </div>
-                            <div class="col-md-8">
-                                <H6 data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Dila__</H6>
-                                <p class="text-muted" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Barang apa saja yang bisa di titipkan?</p>
-                                
-                            </div>
-                            <div class="col-md-2 text-end">
-                                <span class="float-right time text-dark">12:10</span><br>
-                                <span class="badge bg-danger badge rounded-pill p-1" style="font-size: 15px" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">12</span>
-                            
-                            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row ">
-                <div class=" col-md-12 rounded-top card mt-1 ">
-                    <div class="row mt-2">
-                            <div class="col-md-2 image">
-                                <img src="http://nicesnippets.com/demo/man01.png" class="rounded">
-                            </div>
-                            <div class="col-md-8">
-                                <H6 data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Dila__</H6>
-                                <p class="text-muted" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Barang apa saja yang bisa di titipkan?</p>
-                                
-                            </div>
-                            <div class="col-md-2 text-end">
-                                <span class="float-right time text-dark">12:10</span><br>
-                                <span class="badge bg-danger badge rounded-pill p-1" style="font-size: 15px" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">12</span>
-                            </div>
-                    </div>
-                </div>
-            </div>
-            
+                          </div>
+                        </div>
+                      </div></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="collapse multi-collapse" id="multiCollapseExample2">
-            <div class="card card-body">
-                <div class="col-md-12 chat-header rounded-top p-2">  
-                            <img src="http://nicesnippets.com/demo/man01.png" class="rounded">
-                        </div>
-                        <div class="col-md-7 user-detail pt-2">
-                            <h6 class="pt-1">Alex Steve</h6>
-                            <i class="fa fa-circle active ml-1" aria-hidden="true"></i>
 
-                        </div>
-                        <div class="col-md-3 options text-right pt-2">
-                            <i class="fa fa-ellipsis-h mr-1 hide-chat-box"></i>
-                            <i class="fa fa-times hide-chat-box"></i>
-                            <div class="col-md-1">
-                                <a href="/vendor/dashboard"> <i class="bi bi-x text-end" style="font-size: 2rem"></i></a>
-                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="  chat-content p-0 bg-white border border-top-0">
-                    <ul class="pl-3 pr-3 pt-1 mb-1">
-                        <li class="p-2 mb-1 rounded">
-                            <span class="float-right time">12:00</span>
-                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </li>
-                        <li class="p-2 mb-1 rounded">
-                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </li>
-                        <li class="p-2 mb-1 rounded">
-                            <p class="m-0">This is the nice one place in world.</p>
-                        </li><hr>
-                        <li class="p-2 mb-1 rounded bg-info text-white">
-                            <span class="float-right time text-white">12:10</span>
-                            <p class="m-0">Good Morning.</p>
-                        </li>
-                        <li class="p-2 mb-1 rounded">
-                            <span class="float-right time">12:00</span>
-                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                        </li>
-                        <li class="p-2 mb-1 rounded">
-                            <p class="m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</p>
-                        </li>
-                        <li class="p-2 mb-1 rounded">
-                            <p class="m-0">This is the nice one place in world.</p>
-                        </li><hr>
-                        <li class="p-2 mb-1 rounded bg-info text-white">
-                            <span class="float-right time text-white">12:10</span>
-                            <p class="m-0">Good Morning.</p>
-                        </li>
-                    </ul> 
-        
-        
-                    <p class="text-center mb-2 sender font-italic">Stephen</p>
-                    <div class="msg-box p-2">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" placeholder="message ...">
-                            </div>
-                            <div class="col-md-3 mt-3">
-                                <button class="btn btn-success">Send</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+{{-- notifikasi --}}
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="..." class="rounded me-2" alt="...">
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        <div>
+            
         </div>
-        </div>
-          
-        </div>
-{{-- collapse notifikasi --}}
 
+      </div>
+    </div>
+  </div>
+
+{{-- 
 <div class="collapse col-sm-4" style="padding-left:10px" id="collapseExample">
     <div class="card card-body">
         <div class="card-header row">
@@ -439,6 +364,6 @@
         </div>
     </div>
     </div>
-  </div>
+  </div> --}}
 </section>
 @endsection

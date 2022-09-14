@@ -55,7 +55,7 @@
     
        
          
-        <div class="container justify-content-center mb-5" style="width: 800px">
+        <div class="container justify-content-center mb-5" style="width: 80%">
             <div class="card">
               <div class="card-body">
                   <div class="mb-3">

@@ -15,6 +15,7 @@ use App\Http\Controllers\TentangController;
 use App\Http\Controllers\SubLayananController;
 use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\UserLayananController;
+use App\Http\Controllers\LandingpageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,25 +43,29 @@ route::get('/layanan', [LayananController::class, 'index'])->name('layanan');
 // admin-sublayanan
 route::get('/sublayanan', [SubLayananController::class, 'index'])->name('sublayanan');
 
-////////////-----------ADMIN------------/////////////
-Route::controller(AdminController::class)->group(function(){
-    Route::get('/admin/index', 'index')->middleware('role:admin')->name('admin.index');
-    Route::get('/admin/dashboard', 'index')->middleware('auth');
-    Route::get('/admin/profile', 'profile')->middleware('auth');
-    Route::get('/admin/data/order', 'order')->middleware('auth');
-    Route::get('/admin/data/order=barang', 'barang')->middleware('auth');
-    Route::get('/admin/home/home', 'home')->middleware('auth');
-    Route::get('/admin/data/order=bangunan', 'bangunan')->middleware('auth');
-    Route::get('/admin/data/order=pickup', 'pickup')->middleware('auth');
-    Route::get('/admin/data/payment', 'payment')->middleware('auth');
-    Route::get('/admin/vendor', 'vendor')->middleware('auth');
-    Route::get('/admin/vendor/trans', 'trans')->middleware('auth');
-    Route::get('/admin/vendor/data-pick-up', 'data_pickup')->middleware('auth');
-    Route::get('/admin/vendor/data_trans=selesai', 'trans_selesai')->middleware('auth');
-    Route::get('/admin/vendor/data_trans=berlangsung', 'trans_berlangsung')->middleware('auth');
-    Route::get('/admin/setting', 'setting')->middleware('auth');
-    Route::get('/admin/data/pengaturan-user','pengaturanuser')->middleware('auth');
-});
+Route::get('/admin/data/order', [AdminController::class, 'order'])->middleware('auth');
+Route::get('/admin/data/order=barang', [AdminController::class, 'barang'])->middleware('auth');
+Route::get('/admin/Landingpage/home', [AdminController::class, 'home'])->middleware('auth');
+
+// Route::get('/tentang', [LandingpageController::class, 'tentang']);
+// Route::post('/post', [LandingpageController::class, 'store']);
+
+//admin-tentang
+route::resource('tentang', LandingpageController::class);
+route::get('/tentang/edit', [LandingpageController::class, 'edit']);
+route::get('/tentang/simpan', [LandingpageController::class, 'update']);
+
+
+Route::get('/admin/data/order=bangunan', [AdminController::class, 'bangunan'])->middleware('auth');
+Route::get('/admin/data/order=pickup', [AdminController::class, 'pickup'])->middleware('auth');
+Route::get('/admin/data/payment', [AdminController::class, 'payment'])->middleware('auth');
+Route::get('/admin/vendor', [AdminController::class, 'vendor'])->middleware('auth');
+Route::get('/admin/vendor/trans', [AdminController::class, 'trans'])->middleware('auth');
+Route::get('/admin/vendor/data-pick-up', [AdminController::class, 'data_pickup'])->middleware('auth');
+Route::get('/admin/vendor/data_trans=selesai', [AdminController::class, 'trans_selesai'])->middleware('auth');
+Route::get('/admin/vendor/data_trans=berlangsung', [AdminController::class, 'trans_berlangsung'])->middleware('auth');
+Route::get('/admin/setting', [AdminController::class, 'setting'])->middleware('auth');
+Route::get('/admin/data/pengaturan-user', [AdminController::class, 'pengaturanuser'])->middleware('auth');
 
 //UBAH PASSWORD ADMIN
 Route::controller(ProfileController::class)->group(function(){
@@ -250,6 +255,11 @@ Route::get('/user/profile/Tentang', function () {
     ]);
 });
 
+Route::get('/user/fiturchat_user', function () {
+    return view('/user/fiturchat_user',[
+        "title" => "chat"
+    ]);
+});
 
 //Route subkategori layanan
 
@@ -295,7 +305,7 @@ Route::get('/superadmin/dashboard', function () {
 });
 // Route::get('/superadmin/profile', [SuperadminController::class, 'index'])->middleware('role:superadmin')->name('superadmin.profile.ubah');
 
-// //ubah password 
+// //ubah password
 Route::controller(SuperadminController::class)->group(function(){
     Route::get('/superadmin/index', 'index')->middleware('role:superadmin')->name('superadmin.index');
     Route::get('/superadmin/profile','profile')->middleware('auth')->name('profile.profile');
@@ -659,20 +669,20 @@ Route::get('vendor/keuangan/pemasukan', function () {
         "title" =>"pemasukan"
     ]);
     });
-    
-    
+
+
     Route::get('vendor/keuangan/penghasilan', function () {
         return view('vendor/keuangan/penghasilan', [
             "title" =>"penghasillan"
         ]);
         });
-    
+
     Route::get('vendor/keuangan/penarikan', function () {
         return view('vendor/keuangan/penarikan', [
             "title" =>"penarikan"
         ]);
     });
-    
+
     Route::get('vendor/keuangan/saldo', function () {
         return view('vendor/keuangan/saldo', [
             "title" =>"saldo"

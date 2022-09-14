@@ -57,6 +57,20 @@
                 <ul class="sub-menu blank">
                     <li><a class="link_name" href="/admin/home/home">Home</a></li>
                 </ul>
+                <div class="iocn-link">
+                    <a href="/admin/Landingpage/home">
+                        <i class='bx bx-home'></i>
+                        <span class="link_name">Home</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <div class="sub-menu">
+                    <div class="drop-box">
+                        <a href="/admin/Landingpage/home">Home</a>
+                        <a href="{{url('/tentang')}}">Tentang</a>
+
+                    </div>
+                </div>
             </li>
             <li class="list {{ Request::segment(2) == 'layanan ' ? 'active' : '' }}">
                 <div class="iocn-link">
@@ -123,14 +137,14 @@
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     <i class='bx bx-log-out'></i>{{ Auth::user()->name }}
                 </a>
-    
+
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <a data-bs-toggle="modal" data-bs-target="#ModalLogout" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
-    
+
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>

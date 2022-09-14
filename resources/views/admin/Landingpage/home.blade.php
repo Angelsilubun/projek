@@ -35,12 +35,12 @@
                     </div>
 
                     <div class="icon" class="back-in-time" style="margin-top: 30px;">
-                        <img src="../assets/img/reload.png" style="width: 35px; height: 30px" >
+                        <img src="../../assets/img/reload.png" style="width: 35px; height: 30px" >
                         <span style="font-size: large;"> Melayani 24 Jam</span>
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img">
-                    <img src="../assets/img/illust.png" class="img-fluid animated" style="width: 400px; height: 400px">
+                    <img src="../../assets/img/illust.png" class="img-fluid animated" style="width: 400px; height: 400px">
                 </div> 
             </div>
         </div>
@@ -48,32 +48,6 @@
     </section><!-- End Hero -->
 
     <main id="main">
-
-        <!-- ======= About Section ======= -->
-        {{-- <section id="about" class="about">
-
-            <div class="container">
-
-                <div class="row justify-content-between">
-                    <div class="col-lg-5 d-flex align-items-center justify-content-center about-img" width="100%">
-                        <img src="../assets/img/about-p.png" class="img-fluid"  style="width: 300px; height: 250px">
-                    </div>
-                    <div class="col-lg-6 pt-5 pt-lg-0">
-                        <h3 data-aos="fade-up">Tentang Kami</h3>
-                        <p data-aos="fade-up" data-aos-delay="100">
-                            Layanan penitipan pertama di Indonesia yang
-                            terdaftar dan telah dipercaya kredibilitasnya</p>
-                        <p data-aos="fade-up" data-aos-delay="100">
-                            Kami menyediakan jasa penitipan barang bagi anda yang mau menitipkan barangnya.
-                            Selain itu juga kami menyediakan jasa penitipan rumah dan kendaraan anda. Tersedia di 3 Kota
-                            Besar.</p>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
-        <!-- End About Section -->
-
-
 
     </main><!-- End #main -->
 </div>
@@ -86,6 +60,7 @@
                         <thead>
                             <tr>
                                 <td>No.</td>
+                                <td>Gambar</td>
                                 <td>Judul</td>
                                 <td>Sub Judul</td>
                                 <td>Deskripsi</td>
@@ -95,6 +70,7 @@
                         <tbody>
                             <tr>
                                 <td>1</td>
+                                <td><img src="" alt=""></td>
                                 <td>Titip Sini.com</td>
                                 <td>Titip Sekarang</td>
                                 <td>Semua bisa dititipkan termasuk barang, rumah
