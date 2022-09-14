@@ -42,7 +42,7 @@
         </div>
     
     
-         <div class="container-fluid" style="width: 50%">
+         <div class="container-fluid" style="width:80%">
 
     <div class="row">
         <div class="col" style="">

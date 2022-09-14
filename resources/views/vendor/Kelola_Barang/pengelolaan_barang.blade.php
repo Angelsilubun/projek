@@ -52,7 +52,7 @@
         </div>
     
     
-    <div class="p-5 container card" style="width: 70%" >    
+    <div class="p-5 container card" style="width: 80%" >    
             <div class="card ">
             <h5 class="card-header">Pilih jenis pengelolaan barang</h5>
             <div class="card-body">

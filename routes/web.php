@@ -16,6 +16,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\SuperadminController;
+use App\Http\Controllers\LandingpageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,7 +49,17 @@ Route::patch('/profile/{id}', [ProfileController::class, 'update'])->name('profi
 
 Route::get('/admin/data/order', [AdminController::class, 'order'])->middleware('auth');
 Route::get('/admin/data/order=barang', [AdminController::class, 'barang'])->middleware('auth');
-Route::get('/admin/home', [AdminController::class, 'home'])->middleware('auth');
+Route::get('/admin/Landingpage/home', [AdminController::class, 'home'])->middleware('auth');
+
+// Route::get('/tentang', [LandingpageController::class, 'tentang']);
+// Route::post('/post', [LandingpageController::class, 'store']);
+
+//admin-tentang
+route::resource('tentang', LandingpageController::class);
+route::get('/tentang/edit', [LandingpageController::class, 'edit']);
+route::get('/tentang/simpan', [LandingpageController::class, 'update']);
+
+
 Route::get('/admin/data/order=bangunan', [AdminController::class, 'bangunan'])->middleware('auth');
 Route::get('/admin/data/order=pickup', [AdminController::class, 'pickup'])->middleware('auth');
 Route::get('/admin/data/payment', [AdminController::class, 'payment'])->middleware('auth');
@@ -203,6 +214,11 @@ Route::get('/user/profile/Tentang', function () {
     ]);
 });
 
+Route::get('/user/fiturchat_user', function () {
+    return view('/user/fiturchat_user',[
+        "title" => "chat"
+    ]);
+});
 
 //Route subkategori layanan
 
@@ -549,7 +565,7 @@ Route::get('Vendor/Kelola-Bangunan/Kelola_bangunanstep1', function () {
     return view('VendorKelola-Bangunan/Kelola_bangunanstep1', [
         "title" =>"Kelola_bangunanstep1"
     ]);
-});
+});  
 
 Route::get('Vendor/Kelola-Bangunan/layanan_step1', function () {
     return view('Vendor/Kelola-Bangunan//layanan_step1', [

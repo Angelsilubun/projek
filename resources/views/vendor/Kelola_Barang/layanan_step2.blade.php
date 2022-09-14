@@ -53,7 +53,7 @@
     
          <div class="container mt-4 mb-4">
             <div class="row justify-content-center">
-                <div class="card" style="background-color: #fff; width:70% ">
+                <div class="card" style="background-color: #fff; width:80% ">
                     <div class="card-body">
                                     <p><b>Tambah layanan penitipan barang!</b>
                                     <p class="text-muted">Daftarkan gudang / tempat anda dengan 

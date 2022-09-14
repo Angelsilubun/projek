@@ -50,13 +50,21 @@
                 </ul>
             </li>
             <li class="list {{ Request::segment(2) == 'home' ? 'active' : '' }}">
-                <a href="/admin/home">
-                    <i class='bx bx-home'></i>
-                    <span class="link_name">Home</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="/admin/home">Home</a></li>
-                </ul>
+                <div class="iocn-link">
+                    <a href="/admin/Landingpage/home">
+                        <i class='bx bx-home'></i>
+                        <span class="link_name">Home</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <div class="sub-menu">
+                    <div class="drop-box">
+                        <a href="/admin/Landingpage/home">Home</a>
+                        <a href="{{url('/tentang')}}">Tentang</a>
+                        
+                    </div>
+                </div>
+               
             </li>
             <li class="list {{ Request::segment(2) == 'layanan ' ? 'active' : '' }}">
                 <div class="iocn-link">

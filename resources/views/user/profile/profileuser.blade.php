@@ -2,7 +2,7 @@
 @section('container')
 <section class="align-items-center services"  id="services" style="padding-top: 100px;" data-aos-delay="50">
     <div class="container mt-4 mb-4">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="row row-cols-1 row justify-content-center">
             @include('partials.profile')
             <div class="col" style="width: 700px">
               <div class="card">
@@ -88,6 +88,4 @@
 @endsection
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/8ae831de67.js" crossorigin="anonymous"></script> --}}
-{{-- </body>
-</html>
+<script src="https://kit.fontawesome.com/8ae831de67.js" crossorigin="anonymous"></script>
