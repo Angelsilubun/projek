@@ -67,17 +67,17 @@ class UserController extends Controller
 
     public function alamat()
     {
-        return view('user.profile.Alamat');
+        return view('user.profile.alamat.Alamat');
     }
 
     public function EditAlamat()
     {
-        return view('user.profile.edit_alamat');
+        return view('user.profile.alamat.edit_alamat');
     }
 
     public function TambahAlamat()
     {
-        return view('user.profile.Tambah_alamat');
+        return view('user.profile.alamat.Tambah_alamat');
     }
 
     public function Notifikasi()

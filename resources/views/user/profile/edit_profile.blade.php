@@ -44,7 +44,7 @@
                           </div>
                           <div class="col-md-12">
                             <label for="inputkota" class="form-label">Asal Kota</label>
-                            <input type="number" class="form-control input-text" id="inputkota" placeholder="No Telp" value="{{ old ('kota', Auth::user()->kota) }}" required>
+                            <input type="text" class="form-control input-text" id="inputkota" placeholder="Masukkan kota anda" value="{{ old ('kota', Auth::user()->kota) }}" required>
                           </div>
                           <div class="col mb-7">
                             <label for="password-confirm" class="col-sm-2 col-form-label">{{ __('Profile Photo') }}</label>

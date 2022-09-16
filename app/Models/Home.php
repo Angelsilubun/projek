@@ -10,6 +10,6 @@ class Home extends Model
     use HasFactory;
     
     // menggunakan ini agar semua file atau softfile bisa dimasukan semua kedalem database
-    protected $guarded = []; 
-    protected $dates = ['created_at'];
+    protected $fillable = ['judul1', 'judul2', 'judul3', 'gambar']; 
+    // protected $dates = ['created_at'];
 }

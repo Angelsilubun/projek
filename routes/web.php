@@ -9,10 +9,14 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\VendorController;
 use App\Http\Controllers\FinanceController;
+use App\Http\Controllers\IndoregionController;
+use App\Http\Controllers\KebijakanPrivasiController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TentangController;
 use App\Http\Controllers\SuperadminController;
+use App\Http\Controllers\TambahAlamatController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,7 +39,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 //Maps
 Route::get('/map', [MapsController::class, 'maps'])->name('map');
 
-////////////-----------ADMIN------------/////////////
+/////////////-------------ADMIN-------------/////////////
 Route::controller(AdminController::class)->group(function(){
     Route::get('/admin/index', 'index')->middleware('role:admin')->name('admin.index');
     Route::get('/admin/dashboard', 'index')->middleware('auth');
@@ -55,51 +59,93 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('/admin/data/pengaturan-user','pengaturanuser')->middleware('auth');
 });
 
-//UBAH PASSWORD ADMIN
+/////////////-------------UBAH PASSWORD ADMIN-------------/////////////
 Route::controller(ProfileController::class)->group(function(){
     Route::get('/admin/profile', 'index')->name('profile.index');
     Route::patch('/profile/{id}', 'update')->name('profile.update');
 });
 
-//CRUD HOME
-Route::controller(UserController::class)->group(function(){
-    Route::get('/admin/home/home','home')->middleware('auth')->name('admin.home.home');
-    Route::get('/admin/home/tambahhome','tambahhome')->name('admin.home.tambahhome');
-    Route::post('/admin/home/inserthome','inserthome')->name('admin.home.inserthome');
-    //Menampilkan Data berdasarkan ID
-    Route::get('/admin/home/tampilhome/{id}','tampilhome')->name('admin.home.tampilhome');
-    //Mengedit data berdasarkan id
-    Route::post('/admin/home/updatehome/{id}','updatehome')->name('admin.home.updatehome');
-    //delete data berdasarkan id
-    Route::get('/admin/home/deletehome/{id}','deletehome')->name('admin.home.deletehome');
+/////////////-------------CRUD HOME-------------//////////////
+// Route::controller(UserController::class)->group(function(){
+//     Route::get('/admin/home/home','home')->middleware('auth')->name('admin.home.home');
+//     Route::get('/admin/home/tambahhome','tambahhome')->name('admin.home.tambahhome');
+//     Route::post('/admin/home/inserthome','inserthome')->name('admin.home.inserthome');
+//     //Menampilkan Data berdasarkan ID
+//     Route::get('/admin/home/tampilhome/{id}','tampilhome')->name('admin.home.tampilhome');
+//     //Mengedit data berdasarkan id
+//     Route::post('/admin/home/updatehome/{id}','updatehome')->name('admin.home.updatehome');
+//     //delete data berdasarkan id
+//     Route::get('/admin/home/deletehome/{id}','deletehome')->name('admin.home.deletehome');
+// });
+
+///HOME///
+Route::controller(HomeController::class)->group(function(){
+    Route::get('/admin/home/index', 'index')->name('index');
+    Route::get('/admin/home/detail', 'show');
+    Route::put('/admin/home/simpan', 'update');
+    Route::get('/admin/home/edit', 'edit');
 });
 
-/////-------USER-------/////
+Route::resource('/home', HomeController::class);
+
+///////////////-----------------USER-----------------//////////////
 Route::get('/user/index', [UserController::class, 'index'])->middleware('role:user')->name('user.index');
 Route::get('/user/layanan', [LayananController::class, 'index'])->middleware('auth');
 Route::get('/user/tentang', [TentangController::class, 'index'])->middleware('auth');
 Route::get('/user/kontak', [KontakController::class, 'index'])->middleware('auth');
 
-//admin kategori layanan
-Route::get('/admin/layanan-kategori/showsubkategori', [AdminController::class, 'kategorilayanan'])->middleware('auth');
-
 Route::controller(UserController::class)->group(function(){
     Route::get('/user/pemesanan/info_pembayaran', 'InfoPembayaran')->middleware('auth');
-    Route::get('/user/pemesanan/History/Last_Progress', 'LasProgress')->middleware('auth');
+    Route::get('/user/pemesanan/History/Last_Progress', 'LastProgress')->middleware('auth');
     Route::get('/user/pemesanan/History/On_Progress', 'OnProgress')->middleware('auth');
     Route::get('/user/pemesanan/struk', 'struk')->middleware('auth');
     Route::get('/user/pemesanan/konfirm_pembayaran', 'KonfirmPembayaran')->middleware('auth');
     Route::get('/user/pemesanan/pemesanan', 'pemesanan')->middleware('auth');
-    //PROFILE USER
+    /////////////-------------PROFILE USER-------------//////////////
     Route::get('/user/profile/profileuser', 'profileuser')->middleware('auth');
     Route::get('/user/profile/edit_profile', 'editprofile')->middleware('auth');
-    Route::get('/user/profile/Alamat', 'alamat')->middleware('auth');
-    Route::get('/user/profile/edit_alamat', 'EditAlamat')->middleware('auth');
-    Route::get('/user/profile/Tambah_alamat', 'TambahAlamat')->middleware('auth');
+    Route::get('/user/profile/alamat/Alamat', 'alamat')->middleware('auth');
+    Route::get('/user/profile/alamat/edit_alamat', 'EditAlamat')->middleware('auth');
+    // Route::get('/user/profile/alamat/Tambah_alamat', 'TambahAlamat')->middleware('auth');
     Route::get('/user/Notifikasi', 'Notifikasi')->middleware('auth');
     Route::get('/user/profile/kebijakanprivasi', 'KebijakanPrivasi')->middleware('auth');
     Route::get('/user/profile/bantuan', 'Bantuan')->middleware('auth');
 });
+
+//INDOREGION
+Route::controller(IndoregionController::class)->group(function(){
+    Route::get('/user/profile/alamat/Tambah_alamat', 'AlamatProfile')->name('Tambah_alamat.AlamatProfile');
+    Route::post('/getkabupaten', 'getkabupaten')->name('getkabupaten');
+    Route::post('/getkecamatan', 'getkecamatan')->name('getkecamatan');
+    Route::post('/getdesa', 'getdesa')->name('getdesa');
+});
+
+//TAMBAHALAMAT USER
+// Route::controller(IndoregionController::class)->group(function(){
+//     Route::get('/user/profile/alamat/Alamat', 'alamat')->name('user.profile.alamat.Alamat');
+//     Route::get('/user/profile/alamat/Tambah_alamat', 'Tambahalamat')->name('Tambah_alamat.Tambah_alamat');
+//     Route::post('/user/profile/alamat/insert_alamat', 'insertalamat')->name('user.profile.alamat.insert_alamat');
+//     Route::get('/user/profile/alamat/editalamat/{id}', 'editalamat')->name('user.profile.alamat.editalamat');
+//     Route::post('/user/profile/alamat/updatealamat/{id}', 'updatealamat')->name('user.profile.alamat.updatealamat');
+//     Route::get('/user/profile/alamat/deletealamat/{id}', 'deletealamat')->name('user.profile.alamat.deletealamat');
+// });
+
+/////TAMBAH ALAMAT BERDASARKAN USER_ID//////
+Route::controller(TambahAlamatController::class)->group(function(){
+    Route::get('/user/profile/alamat/Alamat', 'alamat')->name('user.profile.alamat.Alamat');
+    Route::post('/user/profile/alamat/Tambah_alamat', 'tambahalamat')->name('store.alamat');
+});
+
+//KEBIJAKAN PRIVASI///
+route::controller(KebijakanPrivasiController::class)->group(function(){
+    Route::get('/user/profile/kebijakanprivasi/index', 'index')->name('index');
+    Route::get('/user/profile/kebijakanprivasi/detail', 'show');
+    Route::put('/user/profile/kebijakanprivasi/simpan', 'update');
+    Route::get('/user/profile/kebijakanprivasi/edit', 'edit');
+}); 
+
+Route::resource('/keb', KebijakanPrivasiController::class);
+
 
 Route::get('/user/bantuan/Jawaban1', function () {
     return view('/user/bantuan/Jawaban1',[
@@ -234,7 +280,7 @@ Route::get('/superadmin/setting/tambah', function () {
     return view('superadmin/setting/tambah');
 });
 
-//Vendor
+/////////////-------------Vendor-------------/////////////
 Route::controller(VendorController::class)->group(function(){
     Route::get('/vendor/homelagi', 'index')->middleware('role:vendor')->name('vendor.index');
     Route::get('/Vendor/order/kendaraan/orderan_baru', 'OrderanBaru')->middleware('auth');
@@ -243,7 +289,7 @@ Route::controller(VendorController::class)->group(function(){
     Route::get('/Vendor/Profile/edit_profilevendor', 'EditProfile')->middleware('auth');
     Route::get('/Vendor/Profile/profile_vendor', 'EditAlamat')->middleware('auth');
     Route::get('/Vendor/Profile/Notifikasi', 'Notifikasi')->middleware('auth');
-    Route::get('/Vendor/Profile/Kebijakan_privasi', 'KebijakanPrivasi')->middleware('auth');
+    // Route::get('/Vendor/Profile/Kebijakan_privasi', 'KebijakanPrivasi')->middleware('auth');
     Route::get('Vendor/Profile/Ketentuan_layanan', 'KetentuanLayanan')->middleware('auth');
     Route::get('/Vendor/Profile/Pusat_bantuan', 'PusatBantuan')->middleware('auth');
 });
@@ -537,7 +583,7 @@ Route::get('Vendor/Kelola-PickUp/setelah_input', function () {
 
 
 //Finance
-Route::controller(FinanceContoller::class)->group(function(){
+Route::controller(FinanceController::class)->group(function(){
     Route::get('/finance/page', 'index')->middleware('role:finance')->name('finance.index');
     Route::get('/finance/transaksi/transaksiuser', 'transaksiuser')->middleware('auth');
     Route::get('/finance/transaksi/transaksivendor', 'transaksivendor')->middleware('auth');

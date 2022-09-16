@@ -636,7 +636,7 @@
 
 .details3 {
     position: relative;
-    width: 100%;
+    width: auto;
     padding: 30px;
     display: grid;
     grid-template-columns: 2 1fr;

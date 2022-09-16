@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}"/>
     <title>titipsini.com</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -30,7 +31,7 @@
     <link href="../../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="{{ asset('../../assets/css/admin.css') }}" rel="stylesheet">
     <link href="{{ asset('../../assets/vendor/aos/aos.css') }}" rel="stylesheet">
-    <link href="../../../assets/css/coba.css" rel="stylesheet">
+    {{-- <link href="../../../assets/css/coba.css" rel="stylesheet"> --}}
 
     <!-- Template Main CSS File -->
     <link href="../../../assets/css/style.css" rel="stylesheet">
@@ -133,6 +134,84 @@ if (alertTrigger) {
 </script>
 <!-- Template Main JS File -->
 <script src="../../../assets/js/main.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </body>
+<!-- JQuery Ajax Indoregion -->
+<script>
+    $(function(){
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
+        });
+
+        $(function(){
+            //MENAMPILAKAN KABUPATEN BERDASARKAN PROVINSI YANG DIPILIH
+            $('#provinsi').on('change',function(){
+                let id_provinsi = $('#provinsi').val();
+
+                // console.log(id_provinsi);
+                $.ajax({
+                    type : 'POST',
+                    url : "{{ route('getkabupaten') }}",
+                    data : {id_provinsi:id_provinsi},
+                    cache : false,
+
+                    success: function(msg){
+                        $('#kabupaten').html(msg);
+                        $('#kecamatan').html('');
+                        $('#desa').html('');
+                    },
+                    error: function(data){
+                        console.log('error:',data);
+                    },
+                })
+            })
+
+            //MENAMPILAKAN KECAMATAN BERDASARKAN KABUPATEN YANG DIPILIH
+            $('#kabupaten').on('change',function(){
+                let id_kabupaten = $('#kabupaten').val();
+
+                // console.log(id_kabupaten);
+                $.ajax({
+                    type : 'POST',
+                    url : "{{ route('getkecamatan') }}",
+                    data : {id_kabupaten:id_kabupaten},
+                    cache : false,
+
+                    success: function(msg){
+                        $('#kecamatan').html(msg);
+                        $('#desa').html('');
+                    },
+                    error: function(data){
+                        console.log('error:',data);
+                    },
+                })
+            })
+
+            //MENAMPILAKAN DESA BERDASARKAN KECAMATAN YANG DIPILIH
+            $('#kecamatan').on('change',function(){
+                let id_kecamatan = $('#kecamatan').val();
+
+                // console.log(id_kecamatan);
+                $.ajax({
+                    type : 'POST',
+                    url : "{{ route('getdesa') }}",
+                    data : {id_kecamatan:id_kecamatan},
+                    cache : false,
+
+                    success: function(msg){
+                        $('#desa').html(msg);
+                    },
+                    error: function(data){
+                        console.log('error:',data);
+                    },
+                })
+            })
+        });
+    });
+
+</script>
+
+
+
 </html>

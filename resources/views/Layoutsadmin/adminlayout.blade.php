@@ -49,15 +49,23 @@
                     <li><a class="link_name" href="/admin/profile">Ubah Password</a></li>
                 </ul>
             </li>
-            <li class="list {{ Request::segment(2) == 'home' ? 'active' : '' }}">
-                <a href="/admin/home/home">
-                    <i class='bx bx-home'></i>
-                    <span class="link_name">Home</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="/admin/home/home">Home</a></li>
-                </ul>
+
+            <li class="list {{ Request::segment(2) == 'index' ? 'active' : '' }}">
+                <div class="iocn-link">
+                    <a>
+                        <i class="bx bx-home"></i>
+                        <span class="link_name dropBtn">Home</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <div class="sub-menu">
+                    <div class="drop-box">
+                        <a href="/admin/home/index">Home</a>
+                        <a href="/user/profile/kebijakanprivasi/index">Kebijakan Privasi</a>
+                    </div>
+                </div>
             </li>
+
             <li class="list {{ Request::segment(2) == 'layanan ' ? 'active' : '' }}">
                 <div class="iocn-link">
                     <a>

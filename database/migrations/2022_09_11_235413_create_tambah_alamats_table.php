@@ -13,13 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('homes', function (Blueprint $table) {
+        Schema::create('tambah_alamats', function (Blueprint $table) {
             $table->id();
-            $table->string('gambar');
-            $table->string('judul1');
-            $table->string('judul2');
-            $table->string('judul3');
+            $table->integer('users_id');
+            $table->string('nama_lengkap');
+            $table->bigInteger('no_telp');
+            $table->longText('detail_alamat');
+            $table->longText('catatan');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('homes');
+        Schema::dropIfExists('tambah_alamats');
     }
 };

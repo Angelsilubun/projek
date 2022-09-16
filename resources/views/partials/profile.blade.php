@@ -3,7 +3,7 @@
               
     <div class="card-profile d-flex justify-content-center align-items-center py-3 rounded-lg flex-column">
         <div class="person-img px-xl-5"><br>
-            <img src="../../team/team-4.jpg" class="img-fluid rounded-circle" alt="">
+            <img src="{{ asset('assets/img/team-4.jpg') }}" class="img-fluid rounded-circle" alt="">
         </div>
         <div class="person-name">
             <h2 class="text-center fs-4 my-2">{{ Auth::user()->name }}</h2>
@@ -26,7 +26,7 @@
                     <p><i class="bi bi-geo-alt px-1"></i>Alamat saya</p>
                 </div>
                 <div class="col-md-3">
-                    <p class="text-end"><a href="/user/profile/Alamat"><i class="bi bi-chevron-right"></i></a></p>
+                    <p class="text-end"><a href="/user/profile/alamat/Alamat"><i class="bi bi-chevron-right"></i></a></p>
                 </div>   
             </div>
 
