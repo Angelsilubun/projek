@@ -39,6 +39,11 @@ class UserController extends Controller
         return view('user.pemesanan.History.On_Progress');
     }
 
+    public function Pembatalan()
+    {
+        return view('user.pemesanan.History.Pembatalan');
+    }
+
     public function struk()
     {
         return view('user.pemesanan.struk');

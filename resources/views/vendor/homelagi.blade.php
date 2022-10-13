@@ -73,6 +73,7 @@
                                                             <td>2 Mobil, 1 Motor</td>
                                                             <td>3</td>
                                                             <td class="td" style="font-size: 12px;">
+                                                                <button class="btndelete"> Tolak</button>
                                                                 <a href="/rincian_baru"><button class="btnedit">Terima</button></a>
                                                                 <button class="btndelete"> Tolak</button>
                                                             </td>

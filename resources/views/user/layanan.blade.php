@@ -45,19 +45,19 @@
                 </div>
             </div>
             <div class="section-title">
-                <h2>{{ $data['title'] }}</h2>
-                <p class="layanan">{{ $data['sub-title'] }}</p>
-            </div>
+              <h2>Layanan</h2>
+              <p>Silahkan pilih Layanan yang kamu butuhkan</p>
+          </div>
             <div class="row align-items-center" style=" margin-left:70px;">
                 <div class="col-md-6 col-lg-4 d-fle2x align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                     <div class="icon-box">
                         <div class="img mb-3">
                             <a href="/user/subkategori/subbaru"><img src="{{ asset('assets/img/icon_kendaraan.png') }}" alt="..."></a>
                         </div>
-                            <h4 class="title"><a href="/user/subkategori/subbaru">Kendaraan</a></h4>
-                            <b>
-                                <p class="description">{{ $data['judul1'] }}</p>
-                            </b>
+                            <h4 class="title"><a href="/user/subkategori/subbaru">Kendaraan RODA 8</a></h4>
+                          <b>
+                              <p class="description">Layanan yang kami sediakan</p>
+                          </b>
                             <p class="description"></p>
                             <p class="description">- Free cuci kendaraan</p>
                             <p class="description">- Kendaraan dibersihkan</p>
@@ -72,12 +72,12 @@
                         <div class="img mb-3">
                             <a href="#"><img src="{{ asset('assets/img/icon_bangunann.png') }}" alt="...">
                         </div>
-                        <h4 class="title"><a href="#">Bangunan</a></h4>
+                        <h4 class="title"><a href="#">Bangunan rumah susun</a></h4>
                             <b>
-                                <p class="description">{{ $data['judul1'] }}</p>
+                              <p class="description">Layanan yang kami sediakan</p>
                             </b>
                             <p class="description"></p>
-                            <p class="description">- Rumah bersih</p>
+                            <p class="description">- Rumah bersih tapi kotor</p>
                             <p class="description">- Kontrol rumah setiap pagi</p>
                             <p class="description">- Rumah dibersihkan</p>
                             <p class="description">- Konsultasi & Support</p>
@@ -91,14 +91,14 @@
                             <div class="img mb-3">
                                 <a href="#"><img src="{{ asset('assets/img/icon_barang.png') }}" alt="..."></a>
                             </div>
-                                <h4 class="title"><a href="#">Barang</a></h4>
+                                <h4 class="title"><a href="#">Barang Rongsok</a></h4>
                                 <b>
-                                    <p class="description">{{ $data['judul1'] }}</p>
+                                  <p class="description">Layanan yang kami sediakan</p>
                                 </b>
                                 <p class="description"></p>
-                                <p class="description">- Barang terjaga</p>
-                                <p class="description">- Kontrol setiap pagi</p>
-                                <p class="description">- Barang dibersihkan</p>
+                                <p class="description">- Barang terjaga setiap hari selalu baru</p>
+                                <p class="description">- Kontrol setiap pagi selalu boong</p>
+                                <p class="description">- Barang dibersihkan boong</p>
                                 <p class="description">- Keamanan terjaga</p>
                                 <p class="description">- Konsultasi & Support</p>
                             <!-- <a href="#services" class="btn btn-primary" style="margin-top: 10px; background:#00B56A;">Pilih Paket</a> -->

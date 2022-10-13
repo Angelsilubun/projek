@@ -17,13 +17,20 @@
             </div>
         </div>
         
-        <div class="cardBox" data-aos="fade-up" data-aos-delay="100">
+        {{-- <div class="cardBox" data-aos="fade-up" data-aos-delay="100">
           
 
             <div class="card border-0" >
                 <div class="card-body">
-                    <div class="numbers">$230.000</div>
-                    <div class="cardName">Pemasukan</div>
+                    <div class="numbers">Rp230.000</div>
+                    <div class="row">
+                    <div class=" col-md-8 cardName">
+                        Penghasilan 
+                    </div>
+                    <div class=" col-md-4 mt-2 text-muted" style="font-size: 12px">
+                        Agustus
+                    </div>  
+                    </div>
                 </div>
                 <div class="iconBx card-img-overlay">
                     <ion-icon name="archive-outline" ></ion-icon>
@@ -39,7 +46,7 @@
                     <ion-icon name="card" style="color:white"></ion-icon>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="row">
             <div class="col-xs-12">
@@ -84,9 +91,10 @@
                             </div>
                             
                             
+                            
                                 <ol class="breadcrumb mt-5" style="font-size:25px">
-                                  <li class="breadcrumb-item"><a href="#">Saldo </a></li>
-                                  <li class="breadcrumb-item active" aria-current="page">Penarikan</li>
+                                  <li class="breadcrumb-item"><a href="#">History </a></li>
+                                  <li class="breadcrumb-item active" aria-current="page"> Penarikan Dana</li>
                                 </ol>
                             <table class="mt-2" >
                                 <thead>

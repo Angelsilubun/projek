@@ -1,7 +1,7 @@
 {{-- umum profile --}}
-<div class="col" style="width: 400px">
+<div class="col" style="width: 420px">
               
-    <div class="card-profile d-flex justify-content-center align-items-center py-3 rounded-lg flex-column">
+    <div class="card d-flex justify-content-center align-items-center py-3 rounded-lg flex-column">
         <div class="person-img px-xl-5"><br>
             <img src="../../team/team-4.jpg" class="img-fluid rounded-circle" alt="">
         </div>

@@ -16,36 +16,58 @@
                 </label>
             </div>
         </div>
-        
-        <div class="cardBox" data-aos="fade-up" data-aos-delay="100">
-          
+        <div class="px-5 mt-4">
+            <div class="card mt-2 p-2" style="border-radius: 10px; ">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h2>Informasi Penghasilan</h2>
+                            <p class="text-muted mt-2" style="font-size: 15px">Bulan ini</p>
+                            <div class="row">
+                            <div class="col-md-8 numbers" style="font-size: 25px">
+                               Rp 230.000
+                            </div>
+                            <div class="col-md-4 text-end" style="font-size: 18px">
+                                <a href="/vendor/keuangan/saldo">Informasi Saldo<i class="bi bi-chevron-double-right"></i></a>
+                            </div>
+                            </div>
+                        </div>
 
-            <div class="card border-0" style="background-color:#00B56A;">
-                <div class="card-body">
-                    <div class="numbers" style="color:white">IDR 2.300.000</div>
-                    <div class="cardName" style="color:white">Pemasukan</div>
-                </div>
-                <div class="iconBx card-img-overlay">
-                   <a href="/vendor/keuangan/pemasukan"> <ion-icon name="archive-outline" style= "color:white"></ion-icon></a>
-                </div>
-            </div>
-            <div class="card border-0">
-                <div class="card-body">
-                    <div class="numbers">IDR 3.000.000</div>
-                    <div class="cardName">Saldo</div>
-                </div>
-                <div class="iconBx card-img-overlay">
-                   <a href="/vendor/keuangan/saldo"> <ion-icon name="card"></ion-icon></a>
+                    </div>
+                    <div class="col-md-1">
+                         <span class="border border-end-0" style="font-size: 90px"></span>
+                    </div>
+                    <div class="col-md-3 mt-3">
+                       <h2 class="text-muted"> Analytic</h2>
+                        <div class="row">
+                            <div class="col-md-8" style="font-size: 16px">
+                               Pesanan
+                            </div>
+                            <div class="col-md-4 " style="font-size: 16px">
+                               43
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8" style="font-size: 16px">
+                               Pesanan Lengkap
+                            </div>
+                            <div class="col-md-4 " style="font-size: 16px">
+                               20
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+       
         <div class="row">
             <div class="col-xs-10">
                 <div class="recentOrders">
                     <div class="details3">
                         <div class="recentOrders3">
                             <div class="rincian d-inline mb-2">
-          <a href="/vendor/keuangan/penghasilan" class=" fw-bold px-2 shadow float-end"><button class="btn btn-success"><i class="bi bi-journal-album p-2"></i>Lihat laporan</button></a>
+                                <h2>Last Order</h2>
+                             <a href="/vendor/keuangan/penghasilan" class=" fw-bold px-2 shadow float-end"><button class="btn btn-success"><i class="bi bi-journal-album p-2"></i>Lihat laporan</button></a>
                             </div>
                             <table>
                                 <thead>

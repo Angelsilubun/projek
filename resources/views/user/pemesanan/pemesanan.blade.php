@@ -263,13 +263,13 @@
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                                     <label class="form-check-label" for="flexRadioDefault1">
-                                                    QRIS (Dana, Gopay)
+                                                    COD
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <a class="btn btn-outline-success" href="/user/pemesanan/qrish" role="button">Pilih</a>
+                                            <a class="btn btn-outline-success" href="" role="button">Pilih</a>
                                         </div>
                                     </div>
                                 </div>
